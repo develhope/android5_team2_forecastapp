@@ -1,8 +1,9 @@
-package co.develhope.meteoapp
+package co.develhope.meteoapp.features.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
+import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
