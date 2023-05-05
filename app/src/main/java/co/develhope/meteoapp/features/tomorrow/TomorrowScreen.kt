@@ -1,24 +1,22 @@
-package co.develhope.meteoapp.features.search
+package co.develhope.meteoapp.features.tomorrow
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import co.develhope.meteoapp.databinding.FragmentHomeBinding
-import co.develhope.meteoapp.databinding.FragmentSearchBinding
+import co.develhope.meteoapp.databinding.ScreenTomorrowBinding
 
-class Search : Fragment() {
-    private lateinit var binding: FragmentSearchBinding
+
+class TomorrowScreen : Fragment() {
+    private lateinit var binding: ScreenTomorrowBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        binding = FragmentSearchBinding.inflate(inflater)
+        binding = ScreenTomorrowBinding.inflate(inflater)
         return binding.root
     }
-
 }

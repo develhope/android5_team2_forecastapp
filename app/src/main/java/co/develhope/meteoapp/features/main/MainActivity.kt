@@ -18,10 +18,10 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.setOnItemSelectedListener{
             val navController = binding.navHostFragment.findNavController()
             when(it.itemId){
-                R.id.home_button -> navController.navigate(R.id.fragment_home)
-                R.id.today_button -> navController.navigate(R.id.fragment_today)
-                R.id.tomorrow_button -> navController.navigate(R.id.fragment_tomorrow)
-                R.id.search_button -> navController.navigate(R.id.fragment_search)
+                R.id.home_screen -> navController.navigate(R.id.home_screen)
+                R.id.today_screen -> navController.navigate(R.id.today_screen)
+                R.id.tomorrow_screen -> navController.navigate(R.id.tomorrow_screen)
+                R.id.search_screen -> navController.navigate(R.id.search_screen)
                 else -> return@setOnItemSelectedListener false
             }
             return@setOnItemSelectedListener true
