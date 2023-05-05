@@ -1,4 +1,4 @@
-package co.develhope.meteoapp
+package co.develhope.meteoapp.features.domain
 
 data class WeatherConditions(
     val country: String,
