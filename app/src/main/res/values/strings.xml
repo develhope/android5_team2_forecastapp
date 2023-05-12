@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">meteoapp</string>
+    <!-- home page example data values -->
+    <string name="some_id">22</string>
+    <string name="some_id2">10/09</string>
+    <string name="mm">0</string>
+    <string name="weather_icon">weather icon</string>
+    <string name="kmh_placeholder">12</string>
+    <string name="some_id3">31</string>
+    <string name="palermo_sic">Palermo, Sicilia</string>
+    <!-- home page ui fixed values -->
+    <string name="prossimi_5_">Prossimi 5 giorni</string>
+    <string name="min">min</string>
+    <string name="max">max</string>
+    <string name="vento">vento</string>
+    <string name="precip_">precip.</string>
+    <string name="kmh">kmh</string>
+    <string name="degrees_symbol">°</string>
+    <string name="mm_of_rain">mm</string>
+    <!-- Giorni della settimana -->
+    <string name="oggi">Oggi</string>
+    <string name="domani">Domani</string>
+    <string name="lunedì">Lunedì</string>
+    <string name="martedì">Martedì</string>
+    <string name="mercoledì">Mercoledì</string>
+    <string name="giovedì">Giovedì</string>
+    <string name="venerdì">Venerdì</string>
+    <string name="sabato">Sabato</string>
+    <string name="domenica">Domenica</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

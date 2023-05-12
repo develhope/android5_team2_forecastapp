@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    >
+
+    <!-- Palermo, Sicilia -->
+    <TextView
+        android:id="@+id/city_name"
+        android:layout_width="235dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="24dp"
+        android:text="@string/palermo_sic"
+        android:textAppearance="@style/city_name"
+        android:gravity="top"
+        android:layout_marginBottom="22dp"
+        />
+
+<include
+    layout="@layout/home_page_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="42dp"
+    />
+    <!-- Prossimi 5 giorni -->
+    <TextView
+        android:id="@+id/prossimi_5_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/prossimi_5_"
+        android:textAppearance="@style/prossimi_5_"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:itemCount="5"
+        tools:listitem="@layout/home_page_item" />
+
+
+</LinearLayout>
