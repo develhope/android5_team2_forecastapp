@@ -1,4 +1,4 @@
-package co.develhope.meteoapp
+package co.develhope.meteoapp.features.search
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,11 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import co.develhope.meteoapp.databinding.FragmentHomeBinding
-import co.develhope.meteoapp.databinding.FragmentTodayBinding
+import co.develhope.meteoapp.databinding.FragmentSearchBinding
 
-class Today : Fragment() {
-
-    private lateinit var binding: FragmentTodayBinding
+class Search : Fragment() {
+    private lateinit var binding: FragmentSearchBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -18,7 +17,7 @@ class Today : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentTodayBinding.inflate(inflater)
+        binding = FragmentSearchBinding.inflate(inflater)
         return binding.root
     }
 
