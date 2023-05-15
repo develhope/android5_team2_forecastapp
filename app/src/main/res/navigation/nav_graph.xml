@@ -2,31 +2,32 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/bottom_nav_navigation"
-    app:startDestination="@id/home">
+    android:id="@+id/buttom_nav_navigation"
+    app:startDestination="@id/home_screen">
 
     <fragment
-        android:id="@+id/home"
-        android:name="co.develhope.meteoapp.features.home.Home"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/home_screen"
+        android:name="co.develhope.meteoapp.features.home.HomeScreen"
+        android:label="screen_home"
+        tools:layout="@layout/screen_home" />
 
     <fragment
-        android:id="@+id/today"
-        android:name="co.develhope.meteoapp.features.today.Today"
-        android:label="fragment_today"
-        tools:layout="@layout/fragment_today" />
+        android:id="@+id/today_screen"
+        android:name="co.develhope.meteoapp.features.today.TodayScreen"
+        android:label="screen_today"
+        tools:layout="@layout/screen_today" />
 
     <fragment
-        android:id="@+id/tomorrow"
-        android:name="co.develhope.meteoapp.features.tomorrow.Tomorrow"
-        android:label="fragment_tomorrow"
-        tools:layout="@layout/fragment_tomorrow" />
+        android:id="@+id/tomorrow_screen"
+        android:name="co.develhope.meteoapp.features.tomorrow.TomorrowScreen"
+        android:label="screen_tomorrow"
+        tools:layout="@layout/screen_tomorrow" />
 
     <fragment
-        android:id="@+id/search"
-        android:name="co.develhope.meteoapp.features.search.Search"
-        android:label="fragment_search"
-        tools:layout="@layout/fragment_search" />
+        android:id="@+id/search_screen"
+        android:name="co.develhope.meteoapp.features.search.SearchScreen"
+        android:label="screen_search"
+        tools:layout="@layout/screen_search" />
+
 
 </navigation>
