@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/buttom_nav_navigation"
+    app:startDestination="@id/fragment_home">
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="co.develhope.meteoapp.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/fragment_today"
+        android:name="co.develhope.meteoapp.Today"
+        android:label="fragment_today"
+        tools:layout="@layout/fragment_today" />
+
+    <fragment
+        android:id="@+id/fragment_tomorrow"
+        android:name="co.develhope.meteoapp.Tomorrow"
+        android:label="fragment_tomorrow"
+        tools:layout="@layout/fragment_tomorrow" />
+
+    <fragment
+        android:id="@+id/fragment_search"
+        android:name="co.develhope.meteoapp.Search"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+
+</navigation>
