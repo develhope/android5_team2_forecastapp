@@ -5,9 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import co.develhope.meteoapp.databinding.HomePageItemBinding
 
-
-
-class ListAdapter(private val items:List<ItemData>):RecyclerView.Adapter<ListAdapter.ViewHolder>() {
+class ListAdapter(private val items:List<HomeScreenItemData>):RecyclerView.Adapter<ListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemBinding = HomePageItemBinding.inflate(LayoutInflater.from(parent.context),parent, false)
@@ -16,14 +14,12 @@ class ListAdapter(private val items:List<ItemData>):RecyclerView.Adapter<ListAda
 
     override fun getItemCount(): Int = items.size
 
-
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
        holder.binding(items[position])
     }
 
     inner class ViewHolder(private val binding: HomePageItemBinding) : RecyclerView.ViewHolder(binding.root){
-       fun binding (item:ItemData){
+       fun binding (item:HomeScreenItemData){
            binding.day.setText(item.day)
            binding.wcIcon.setImageResource(item.weather)
            binding.wind.text = item.wind.toString()

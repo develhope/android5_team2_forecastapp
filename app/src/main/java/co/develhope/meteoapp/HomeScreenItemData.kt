@@ -3,7 +3,8 @@ package co.develhope.meteoapp
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 
-data class ItemData(
+data class HomeScreenItemData(
+//    TODO add date values
     @DrawableRes val weather: Int,
     @StringRes val day: Int,
     val wind:Int,
