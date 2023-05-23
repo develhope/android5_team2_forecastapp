@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_48"
+    android:layout_width="match_parent"
+    android:layout_height="66dp"
+    android:background="@drawable/search_screen_item_background"
+    android:layout_marginBottom="8dp">
+
+<!--    Name of the city-->
+    <TextView
+        android:id="@+id/search_item_city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="22dp"
+        android:layout_marginStart="16dp"
+        android:textSize="18sp"
+        android:text="Palermo"
+        android:textColor="@color/white"/>
+
+<!--    weather conditions precip-->
+    <TextView
+        android:id="@+id/search_item_weather_conditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="precip"
+        android:textColor="@color/white"
+        android:textSize="10sp"/>
+
+<!--    degrees 12-->
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_toStartOf="@id/degrees_symbol"
+        android:text="12"
+        android:textColor="@color/white"/>
+
+<!--    °   -->
+    <TextView
+        android:id="@+id/degrees_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/search_item_weather_conditions"
+        android:layout_alignTop="@+id/text"
+        android:text="°"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>
