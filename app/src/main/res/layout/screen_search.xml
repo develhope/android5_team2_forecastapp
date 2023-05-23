@@ -7,14 +7,14 @@
     android:background="#F0EFFF"
     tools:context=".features.search.SearchScreen"
     android:orientation="vertical"
-    android:padding="18dp">
+    android:padding="@dimen/search_screen_padding">
 
     <androidx.appcompat.widget.SearchView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/search_rectangle"
         android:inputType="text"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="@dimen/search_view_margin_top"
         app:searchIcon="@drawable/search"
         app:queryHint="@string/search_a_city"
         app:queryBackground="@drawable/search_rectangle"
@@ -24,15 +24,15 @@
         android:id="@+id/textview_screen_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="@dimen/recent_researches_margin_top"
         android:text="@string/recent_researches"
         android:visibility="visible"
-        android:textSize="15sp"
+        android:textSize="@dimen/recent_researches_text_size"
         android:textColor="#230EA5"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:listitem="@layout/search_screen_item"
-        android:layout_marginTop="24dp"/>
+        android:layout_marginTop="@dimen/search_screen_recyclerview_margin_top"/>
 </LinearLayout>

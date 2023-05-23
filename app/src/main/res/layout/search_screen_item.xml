@@ -3,19 +3,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/frame_48"
     android:layout_width="match_parent"
-    android:layout_height="66dp"
+    android:layout_height="@dimen/search_screen_item_height"
     android:background="@drawable/search_screen_item_background"
-    android:layout_marginBottom="8dp">
+    android:layout_marginBottom="@dimen/search_screen_item_margin_bottom">
 
 <!--    Name of the city-->
     <TextView
         android:id="@+id/search_item_city_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:layout_marginBottom="22dp"
-        android:layout_marginStart="16dp"
-        android:textSize="18sp"
+        android:layout_marginTop="@dimen/search_item_city_name_margin_top"
+        android:layout_marginBottom="@dimen/search_item_city_name_margin_bottom"
+        android:layout_marginStart="@dimen/search_item_city_name_margin_start"
+        android:textSize="@dimen/search_item_city_name_text_size"
         android:text="Palermo"
         android:textColor="@color/white"/>
 
@@ -26,11 +26,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="@dimen/search_item_wc_margin_end"
+        android:layout_marginBottom="@dimen/search_item_wc_margin_bottom"
         android:text="precip"
         android:textColor="@color/white"
-        android:textSize="10sp"/>
+        android:textSize="@dimen/search_item_wc_text_size"/>
 
 <!--    degrees 12-->
     <TextView
@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/search_item_tempertuare_margin_top"
         android:layout_toStartOf="@id/degrees_symbol"
         android:text="12"
         android:textColor="@color/white"/>

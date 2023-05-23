@@ -5,4 +5,6 @@
     <string name="tomorrow_icon">Tomorrow</string>
     <string name="search_icon">Search</string>
     <string name="home_fragment">HOME!</string>
+    <string name="recent_researches">Recent researches</string>
+    <string name="search_a_city">Search a city</string>
 </resources>
