@@ -1,2 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+<!--    home screen City title-->
+    <dimen name="city_text_margin_top">18dp</dimen>
+    <dimen name="city_text_margin_start">24dp</dimen>
+    <dimen name="city_text_margin_bottom">22dp</dimen>
+<!--    home screen weather conditions card-->
+    <dimen name="weather_card_margin_bottom">32dp</dimen>
+<!--    home page next 5 days text-->
+    <dimen name="next_5_days_margin_start">9dp</dimen>
+    <dimen name="next_5_days_margin_bottom">10dp</dimen>
+<!--    home screen item-->
+    <dimen name="home_page_item_width">342dp</dimen>
+    <dimen name="home_page_item_heigth">155dp</dimen>
+    <dimen name="home_page_item_elevation">4dp</dimen>
+    <dimen name="home_page_item_margin_bottom">5dp</dimen>
+    <dimen name="home_page_item_margin_start">18dp</dimen>
+    <dimen name="home_page_item_margin_top">18dp</dimen>
+    <dimen name="home_page_item_date_margin_top">50dp</dimen>
+<!--    home screen item minimum temperature-->
+    <dimen name="min_temperature_margin_start">145dp</dimen>
+    <dimen name="min_temperature_margin_top">18dp</dimen>
+<!--    home screen item minimum temperature text-->
+    <dimen name="min_temperature_text_margin_start">145dp</dimen>
+    <dimen name="min_temperature_text_margin_top">46dp</dimen>
+<!--    home screen item minimum temperature-->
+    <dimen name="max_temperature_margin_start">254dp</dimen>
+    <dimen name="max_temperature_margin_top">18dp</dimen>
+<!--    home screen item minimum temperature text-->
+    <dimen name="max_temperature_text_margin_start">254dp</dimen>
+    <dimen name="max_temperature_text_margin_top">46dp</dimen>
+<!--    home screen item weather condition image-->
+    <dimen name="wc_icon_margin_start">18dp</dimen>
+    <dimen name="wc_icon_margin_top">86dp</dimen>
+<!--    home screen item mm of rainfall-->
+    <dimen name="mm_of_rain_margin_top">88dp</dimen>
+    <dimen name="mm_of_rain_margin_start">152dp</dimen>
+<!--    home screen item rainfall-->
+    <dimen name="rainfall_margin_top">116dp</dimen>
+    <dimen name="rainfall_margin_start">152dp</dimen>
+<!--    home screen item wind in kmh-->
+    <dimen name="wind_kmh_margin_start">261dp</dimen>
+    <dimen name="wind_kmh_margin_top">89dp</dimen>
+<!--    home screen item wind text-->
+    <dimen name="wind_text_margin_top">117dp</dimen>
+    <dimen name="wind_text_margin_start">261dp</dimen>
+
+</resources>

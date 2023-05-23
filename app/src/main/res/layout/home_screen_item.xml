@@ -2,96 +2,96 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/frame_10"
-    android:layout_width="342dp"
-    android:layout_height="155dp"
+    android:layout_width="@dimen/home_page_item_width"
+    android:layout_height="@dimen/home_page_item_heigth"
     android:layout_alignParentStart="true"
     android:layout_alignParentTop="true"
     android:background="@drawable/drawableframe10"
-    android:elevation="4dp"
-    android:layout_marginBottom="5dp">
+    android:elevation="@dimen/home_page_item_elevation"
+    android:layout_marginBottom="@dimen/home_page_item_margin_bottom">
 
     <!-- Oggi -->
     <TextView
-        android:id="@+id/day"
+        android:id="@+id/current_day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/today"
         android:textAppearance="@style/oggi"
         android:gravity="top"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="18dp"/>
+        android:layout_marginStart="@dimen/home_page_item_margin_start"
+        android:layout_marginTop="@dimen/home_page_item_margin_top"/>
 
     <!-- 10/09 -->
     <TextView
-        android:id="@+id/date"
+        android:id="@+id/day_and_month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="18dp"
+        android:layout_marginTop="@dimen/home_page_item_date_margin_top"
+        android:layout_marginStart="@dimen/home_page_item_margin_start"
         android:text="@string/sample_date"
         android:textAppearance="@style/some_id"
         android:gravity="top"/>
 
     <!-- 22 -->
     <TextView
-        android:id="@+id/temp_min"
+        android:id="@+id/min_temperature_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="@dimen/min_temperature_margin_start"
+        android:layout_marginTop="@dimen/min_temperature_margin_top"
         android:text="@string/sample_min_temperature"
         android:textAppearance="@style/some_id"
         android:gravity="top"/>
 
     <!-- ° -->
     <TextView
-        android:id="@+id/grade_min"
+        android:id="@+id/min_temperature_symbol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/degrees_symbol"
         android:textAppearance="@style/some_id"
-        android:layout_alignTop="@id/temp_min"
-        android:layout_toEndOf="@id/temp_min"/>
+        android:layout_alignTop="@id/min_temperature_value"
+        android:layout_toEndOf="@id/min_temperature_value"/>
 
     <!-- min -->
     <TextView
-        android:id="@+id/min"
+        android:id="@+id/min_temperature_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginStart="@dimen/min_temperature_text_margin_start"
+        android:layout_marginTop="@dimen/min_temperature_text_margin_top"
         android:text="@string/min"
         android:textAppearance="@style/home_font"
         android:gravity="top"/>
 
     <!-- 31(°) -->
     <TextView
-        android:id="@+id/temp_max"
+        android:id="@+id/max_temperature_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="254dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="@dimen/max_temperature_margin_start"
+        android:layout_marginTop="@dimen/max_temperature_margin_top"
         android:text="@string/sample_max_temperature"
         android:textAppearance="@style/some_id"
         android:gravity="top"/>
 
     <!-- ° -->
     <TextView
-        android:id="@+id/grade_max"
+        android:id="@+id/max_temperature_symbol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/degrees_symbol"
         android:textAppearance="@style/some_id"
-        android:layout_alignTop="@id/temp_max"
-        android:layout_toEndOf="@id/temp_max"/>
+        android:layout_alignTop="@id/max_temperature_value"
+        android:layout_toEndOf="@id/max_temperature_value"/>
 
     <!-- max -->
     <TextView
-        android:id="@+id/max"
+        android:id="@+id/max_temperature_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="254dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginStart="@dimen/max_temperature_text_margin_start"
+        android:layout_marginTop="@dimen/max_temperature_text_margin_top"
         android:text="@string/max"
         android:textAppearance="@style/home_font"
         android:gravity="top"/>
@@ -103,48 +103,48 @@
         android:layout_height="wrap_content"
         android:src="@drawable/wc_sun"
         android:contentDescription="@string/sample_weather_icon"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="86dp"/>
+        android:layout_marginStart="@dimen/wc_icon_margin_start"
+        android:layout_marginTop="@dimen/wc_icon_margin_top"/>
 
     <!-- 0(mm) -->
     <TextView
-        android:id="@+id/mm"
+        android:id="@+id/rainfall_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:layout_marginStart="152dp"
+        android:layout_marginTop="@dimen/mm_of_rain_margin_top"
+        android:layout_marginStart="@dimen/mm_of_rain_margin_start"
         android:text="@string/sample_mm"
         android:textAppearance="@style/some_id"
         android:gravity="top"/>
 
     <!-- mm -->
     <TextView
-        android:id="@+id/mm_rain"
+        android:id="@+id/mm_rainfall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/mm_of_rain"
         android:textAppearance="@style/some_id"
-        android:layout_alignTop="@id/mm"
-        android:layout_toEndOf="@id/mm"/>
+        android:layout_alignTop="@id/rainfall_value"
+        android:layout_toEndOf="@id/rainfall_value"/>
 
     <!-- precip. -->
     <TextView
-        android:id="@+id/precip_"
+        android:id="@+id/rainfall_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:layout_marginStart="152dp"
+        android:layout_marginTop="@dimen/rainfall_margin_top"
+        android:layout_marginStart="@dimen/rainfall_margin_start"
         android:text="@string/rainfall"
         android:textAppearance="@style/home_font"
         android:gravity="top"/>
 
     <!-- 12(kmh) -->
     <TextView
-        android:id="@+id/wind"
+        android:id="@+id/wind_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="261dp"
-        android:layout_marginTop="89dp"
+        android:layout_marginStart="@dimen/wind_kmh_margin_start"
+        android:layout_marginTop="@dimen/wind_kmh_margin_top"
         android:text="@string/sample_kmh_placeholder"
         android:textAppearance="@style/some_id"
         android:gravity="top"/>
@@ -156,16 +156,16 @@
         android:layout_height="wrap_content"
         android:text="@string/kmh"
         android:textAppearance="@style/some_id"
-        android:layout_alignTop="@id/wind"
-        android:layout_toEndOf="@id/wind"/>
+        android:layout_alignTop="@id/wind_value"
+        android:layout_toEndOf="@id/wind_value"/>
 
     <!-- vento -->
     <TextView
-        android:id="@+id/vento"
+        android:id="@+id/wind_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="117dp"
-        android:layout_marginStart="261dp"
+        android:layout_marginTop="@dimen/wind_text_margin_top"
+        android:layout_marginStart="@dimen/wind_text_margin_start"
         android:text="@string/wind"
         android:textAppearance="@style/home_font"
         android:gravity="top"/>
