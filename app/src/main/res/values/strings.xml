@@ -1,22 +1,19 @@
 <resources>
     <string name="app_name">meteoapp</string>
     <!-- home page example data values -->
-    <string name="sample_min_temperature">22</string>
+    <string name="sample_min_temperature">22°</string>
     <string name="sample_date">10/09</string>
-    <string name="sample_mm">0</string>
+    <string name="sample_mm">0mm</string>
     <string name="sample_weather_icon">weather icon</string>
-    <string name="sample_kmh_placeholder">12</string>
-    <string name="sample_max_temperature">31</string>
+    <string name="sample_kmh_placeholder">12kmh</string>
+    <string name="sample_max_temperature">31°</string>
     <string name="sample_city_region">Palermo, Sicilia</string>
     <!-- home page ui fixed values -->
-    <string name="next_5_days">Prossimi 5 giorni</string>
+    <string name="next_5_days">Next 5 days</string>
     <string name="min">min</string>
     <string name="max">max</string>
     <string name="wind">vento</string>
     <string name="rainfall">precip.</string>
-    <string name="kmh">kmh</string>
-    <string name="degrees_symbol">°</string>
-    <string name="mm_of_rain">mm</string>
     <!-- Giorni della settimana -->
     <string name="today">Oggi</string>
     <string name="tomorrow">Domani</string>
@@ -32,4 +29,4 @@
     <string name="today_icon">Today</string>
     <string name="tomorrow_icon">Tomorrow</string>
     <string name="search_icon">Search</string>
-</resources>git status
+</resources>

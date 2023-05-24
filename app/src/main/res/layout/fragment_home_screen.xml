@@ -12,27 +12,27 @@
         android:id="@+id/city_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/city_text_margin_top"
-        android:layout_marginStart="@dimen/city_text_margin_start"
+        android:layout_marginTop="@dimen/dimens24dp"
+        android:layout_marginStart="@dimen/dimens24dp"
         android:text="@string/sample_city_region"
         android:textAppearance="@style/city_name"
         android:gravity="top"
-        android:layout_marginBottom="@dimen/city_text_margin_bottom"/>
+        android:layout_marginBottom="@dimen/dimens22dp"/>
 
     <include
         layout="@layout/home_screen_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/weather_card_margin_bottom"/>
+        android:layout_marginBottom="@dimen/dimens32dp"/>
 
     <!-- Prossimi 5 giorni -->
     <TextView
         android:id="@+id/prossimi_5_"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/next_5_days_margin_start"
-        android:layout_marginBottom="@dimen/next_5_days_margin_bottom"
+        android:layout_marginStart="@dimen/dimens10dp"
+        android:layout_marginBottom="@dimen/dimens10dp"
         android:text="@string/next_5_days"
         android:textAppearance="@style/prossimi_5_"/>
 
