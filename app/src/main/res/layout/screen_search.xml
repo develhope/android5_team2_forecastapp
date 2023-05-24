@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#F0EFFF"
+    android:background="@color/screen_search_background_color"
     tools:context=".features.search.SearchScreen"
     android:orientation="vertical"
     android:padding="@dimen/search_screen_padding">
