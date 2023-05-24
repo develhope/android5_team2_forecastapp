@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<!--    search screen layout-->
-    <dimen name="search_screen_padding">18dp</dimen>
-<!--    search screen search view-->
-    <dimen name="search_view_margin_top">80dp</dimen>
-<!--    search screen recent researches text-->
-    <dimen name="recent_researches_margin_top">22dp</dimen>
-    <dimen name="recent_researches_text_size">15sp</dimen>
-<!--    search screen recycle view-->
-    <dimen name="search_screen_recyclerview_margin_top">24dp</dimen>
-<!--    search screen item-->
-    <dimen name="search_screen_item_height">66dp</dimen>
-    <dimen name="search_screen_item_margin_bottom">8dp</dimen>
-<!--    search screen item city name-->
-    <dimen name="search_item_city_name_margin_top">22dp</dimen>
-    <dimen name="search_item_city_name_margin_bottom">22dp</dimen>
-    <dimen name="search_item_city_name_margin_start">16dp</dimen>
-    <dimen name="search_item_city_name_text_size">18sp</dimen>
-<!--    search screen item weather conditions text-->
-    <dimen name="search_item_wc_margin_end">16dp</dimen>
-    <dimen name="search_item_wc_margin_bottom">16dp</dimen>
-    <dimen name="search_item_wc_text_size">10sp</dimen>
-<!--    search screen item temperature-->
-    <dimen name="search_item_tempertuare_margin_top">16dp</dimen>
+    <dimen name="dimens8dp">8dp</dimen>
+    <dimen name="dimens10sp">10sp</dimen>
+    <dimen name="dimens15sp">15sp</dimen>
+    <dimen name="dimens18sp">18sp</dimen>
+    <dimen name="dimens16dp">16dp</dimen>
+    <dimen name="dimens18dp">18dp</dimen>
+    <dimen name="dimens22dp">22dp</dimen>
+    <dimen name="dimens24dp">24dp</dimen>
+    <dimen name="dimens66dp">66dp</dimen>
+    <dimen name="dimens80dp">80dp</dimen>
 </resources>

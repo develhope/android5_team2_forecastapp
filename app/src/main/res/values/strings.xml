@@ -7,4 +7,7 @@
     <string name="home_fragment">HOME!</string>
     <string name="recent_researches">Recent researches</string>
     <string name="search_a_city">Search a city</string>
+    <string name="example_temperature_search">12°</string>
+    <string name="example_search_screen_city">Palermo</string>
+    <string name="screen_search_rainfall_text">precip</string>
 </resources>
