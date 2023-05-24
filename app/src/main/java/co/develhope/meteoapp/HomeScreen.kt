@@ -23,11 +23,11 @@ class HomeScreen : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
         val items = listOf(
-            HomeScreenItemData(R.drawable.wc_sun_cloud,R.string.today,12,7,48,8),
-            HomeScreenItemData(R.drawable.wc_sun,R.string.tomorrow,145,7,48,8),
-            HomeScreenItemData(R.drawable.wc_sun,R.string.monday,2,15,37,5),
-            HomeScreenItemData(R.drawable.wc_sun_cloud,R.string.tuesday,37,48,51,175),
-            HomeScreenItemData(R.drawable.wc_rain_cloud,R.string.wednesday,189,34,85,150)
+            WeatherConditions(R.drawable.wc_sun_cloud,R.string.today,12,7,48,8),
+            WeatherConditions(R.drawable.wc_sun,R.string.tomorrow,145,7,48,8),
+            WeatherConditions(R.drawable.wc_sun,R.string.monday,2,15,37,5),
+            WeatherConditions(R.drawable.wc_sun_cloud,R.string.tuesday,37,48,51,175),
+            WeatherConditions(R.drawable.wc_rain_cloud,R.string.wednesday,189,34,85,150)
         )
         binding.recyclerView.adapter = ListAdapter(items)
     }
