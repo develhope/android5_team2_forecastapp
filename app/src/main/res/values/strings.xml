@@ -5,4 +5,6 @@
     <string name="tomorrow_icon">Tomorrow</string>
     <string name="search_icon">Search</string>
     <string name="home_fragment">HOME!</string>
-</resources>git status
+    <string name="error_message"> C’è stato un problema con il\n caricamento dei tuoi dati.\n Verifica la tua rete e riprova.</string>
+    <string name="retry">Riprova</string>
+</resources>
