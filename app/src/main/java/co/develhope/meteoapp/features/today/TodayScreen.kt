@@ -6,10 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.ScreenTodayBinding
-import co.develhope.meteoapp.features.home.domain.WeatherConditions
+
 
 class TodayScreen : Fragment() {
 
@@ -19,7 +18,7 @@ class TodayScreen : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         binding = ScreenTodayBinding.inflate(inflater)
         return binding.root
