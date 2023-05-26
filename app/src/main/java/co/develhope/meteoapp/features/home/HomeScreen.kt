@@ -1,23 +1,24 @@
-package co.develhope.meteoapp.features.tomorrow
+package co.develhope.meteoapp.features.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import co.develhope.meteoapp.databinding.FragmentTodayBinding
-import co.develhope.meteoapp.databinding.FragmentTomorrowBinding
+import co.develhope.meteoapp.databinding.ScreenHomeBinding
 
+class HomeScreen : Fragment() {
 
-class Tomorrow : Fragment() {
-    private lateinit var binding: FragmentTomorrowBinding
+    private lateinit var binding: ScreenHomeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentTomorrowBinding.inflate(inflater)
+
+        binding = ScreenHomeBinding.inflate(inflater)
         return binding.root
     }
+
 }

@@ -5,8 +5,6 @@
     <string name="tomorrow_icon">Tomorrow</string>
     <string name="search_icon">Search</string>
     <string name="home_fragment">HOME!</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="error_message"> C’è stato un problema con il\n caricamento dei tuoi dati.\n Verifica la tua rete e riprova.</string>
     <string name="retry">Riprova</string>
 </resources>
