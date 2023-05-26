@@ -17,7 +17,7 @@ class TomorrowScreen : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = ScreenTomorrowBinding.inflate(inflater)
         return binding.root
     }
