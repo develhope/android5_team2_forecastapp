@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/search_rectangle"
         android:inputType="text"
-        android:layout_marginTop="@dimen/dimens80dp"
         app:searchIcon="@drawable/search"
         app:queryHint="@string/search_a_city"
         app:queryBackground="@drawable/search_rectangle"

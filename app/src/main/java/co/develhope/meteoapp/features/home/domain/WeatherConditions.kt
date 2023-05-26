@@ -1,18 +1,15 @@
 package co.develhope.meteoapp.features.home.domain
 
-data class WeatherConditions(
-    val country: String,
-    val region: String,
-    val city: String,
-    val timeOfDay: String,
-    val weatherCondition: String,
-    val minTemperature: Int,
-    val maxTemperature: Int,
-    val wind: Int,
-    val windDirection: String,
-    val humidity: Int,
-    val rainfall: Int,
-    val cloudCover: Int,
-    val uvIndex: Int,
-)
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 
+data class WeatherConditions(
+//    TODO add date values
+    @DrawableRes val weather: Int,
+    @StringRes val day: Int,
+    val wind:Int,
+    val temp_min:Int,
+    val temp_max:Int,
+    val mm_rain:Int,
+    ) {
+}
