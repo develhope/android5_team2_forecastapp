@@ -1,15 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
-    tools:context=".features.search.SearchScreen">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/screen_search_background_color"
+    tools:context=".features.search.SearchScreen"
+    android:orientation="vertical"
+    android:padding="@dimen/dimens18dp">
+
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_rectangle"
+        android:inputType="text"
+        android:layout_marginTop="@dimen/dimens80dp"
+        app:searchIcon="@drawable/search"
+        app:queryHint="@string/search_a_city"
+        app:queryBackground="@drawable/search_rectangle"
+        app:iconifiedByDefault="false"/>
 
     <TextView
+        android:id="@+id/textview_screen_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="SEARCH!" />
+        android:layout_marginTop="@dimen/dimens22dp"
+        android:text="@string/recent_researches"
+        android:visibility="visible"
+        android:textSize="@dimen/dimens15sp"
+        android:textColor="#230EA5"/>
 
-</FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/search_screen_item"
+        android:layout_marginTop="@dimen/dimens24dp"/>
+</LinearLayout>

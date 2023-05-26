@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimens66dp"
+    android:background="@drawable/search_screen_item_background"
+    android:layout_marginBottom="@dimen/dimens8dp">
+
+<!--    Name of the city-->
+    <TextView
+        android:id="@+id/search_item_city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens22dp"
+        android:layout_marginBottom="@dimen/dimens22dp"
+        android:layout_marginStart="@dimen/dimens16dp"
+        android:textSize="@dimen/dimens18sp"
+        android:text="@string/example_search_screen_city"
+        android:textColor="@color/white"/>
+
+<!--    weather conditions precip-->
+    <TextView
+        android:id="@+id/search_item_weather_conditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/dimens16dp"
+        android:layout_marginBottom="@dimen/dimens16dp"
+        android:text="@string/screen_search_rainfall_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimens10sp"/>
+
+<!--    degrees 12-->
+    <TextView
+        android:id="@+id/search_screen_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/dimens16dp"
+        android:layout_alignEnd="@id/search_item_weather_conditions"
+        android:text="@string/example_temperature_search"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>
