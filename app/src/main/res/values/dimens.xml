@@ -5,9 +5,6 @@
     <dimen name="dimens15sp">15sp</dimen>
     <dimen name="dimens18sp">18sp</dimen>
     <dimen name="dimens16dp">16dp</dimen>
-    <dimen name="dimens18dp">18dp</dimen>
-    <dimen name="dimens22dp">22dp</dimen>
-    <dimen name="dimens24dp">24dp</dimen>
     <dimen name="dimens66dp">66dp</dimen>
     <dimen name="dimens80dp">80dp</dimen>
     <dimen name="dimens5dp">5dp</dimen>
