@@ -49,6 +49,7 @@ android {
         jvmTarget = '1.8'
     }
     namespace 'co.develhope.meteoapp'
+
     buildToolsVersion '33.0.2'
 }
 

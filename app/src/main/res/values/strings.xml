@@ -52,4 +52,6 @@
     <string name="hour9pm">09:00 pm</string>
     <string name="hour10pm">10:00 pm</string>
     <string name="hour11pm">11:00 pm</string>
+    <string name="error_message"> C’è stato un problema con il\n caricamento dei tuoi dati.\n Verifica la tua rete e riprova.</string>
+    <string name="retry">Riprova</string>
 </resources>
