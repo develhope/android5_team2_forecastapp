@@ -6,16 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import co.develhope.meteoapp.databinding.FragmentHomeScreenBinding
+import co.develhope.meteoapp.databinding.ScreenHomeBinding
 
 class HomeScreen : Fragment() {
-    private lateinit var binding: FragmentHomeScreenBinding
+    private lateinit var binding: ScreenHomeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentHomeScreenBinding.inflate(inflater)
+        binding = ScreenHomeBinding.inflate(inflater)
         return binding.root
     }
 
