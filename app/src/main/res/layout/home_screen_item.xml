@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_10"
+    android:layout_width="@dimen/dimens342dp"
+    android:layout_height="@dimen/dimens155dp"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:background="@drawable/drawableframe10"
+    android:elevation="@dimen/dimens5dp"
+    android:layout_marginBottom="@dimen/dimens5dp">
+
+    <!-- Oggi -->
+    <TextView
+        android:id="@+id/current_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/today"
+        android:textAppearance="@style/oggi"
+        android:gravity="top"
+        android:layout_marginStart="@dimen/dimens18dp"
+        android:layout_marginTop="@dimen/dimens18dp"/>
+
+    <!-- 10/09 -->
+    <TextView
+        android:id="@+id/day_and_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens50dp"
+        android:layout_marginStart="@dimen/dimens18dp"
+        android:text="@string/sample_date"
+        android:textAppearance="@style/some_id"
+        android:gravity="top"/>
+
+    <!-- 22 -->
+    <TextView
+        android:id="@+id/min_temperature_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens145dp"
+        android:layout_marginTop="@dimen/dimens18dp"
+        android:text="@string/sample_min_temperature"
+        android:textAppearance="@style/some_id"
+        android:gravity="top"/>
+
+    <!-- min -->
+    <TextView
+        android:id="@+id/min_temperature_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens145dp"
+        android:layout_marginTop="@dimen/dimens46dp"
+        android:text="@string/min"
+        android:textAppearance="@style/home_font"
+        android:gravity="top"/>
+
+    <!-- 31(°) -->
+    <TextView
+        android:id="@+id/max_temperature_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens254dp"
+        android:layout_marginTop="@dimen/dimens18dp"
+        android:text="@string/sample_max_temperature"
+        android:textAppearance="@style/some_id"
+        android:gravity="top"/>
+
+    <!-- max -->
+    <TextView
+        android:id="@+id/max_temperature_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens254dp"
+        android:layout_marginTop="@dimen/dimens46dp"
+        android:text="@string/max"
+        android:textAppearance="@style/home_font"
+        android:gravity="top"/>
+
+    <!-- sun -->
+    <ImageView
+        android:id="@+id/wc_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/wc_sun"
+        android:contentDescription="@string/sample_weather_icon"
+        android:layout_marginStart="@dimen/dimens18dp"
+        android:layout_marginTop="@dimen/dimens89dp"/>
+
+    <!-- 0(mm) -->
+    <TextView
+        android:id="@+id/rainfall_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens89dp"
+        android:layout_marginStart="@dimen/dimens152dp"
+        android:text="@string/sample_mm"
+        android:textAppearance="@style/some_id"
+        android:gravity="top"/>
+
+    <!-- precip. -->
+    <TextView
+        android:id="@+id/rainfall_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens117dp"
+        android:layout_marginStart="@dimen/dimens152dp"
+        android:text="@string/rainfall"
+        android:textAppearance="@style/home_font"
+        android:gravity="top"/>
+
+    <!-- 12(kmh) -->
+    <TextView
+        android:id="@+id/wind_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens261dp"
+        android:layout_marginTop="@dimen/dimens89dp"
+        android:text="@string/sample_kmh_placeholder"
+        android:textAppearance="@style/some_id"
+        android:gravity="top"/>
+
+    <!-- vento -->
+    <TextView
+        android:id="@+id/wind_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens117dp"
+        android:layout_marginStart="@dimen/dimens261dp"
+        android:text="@string/wind"
+        android:textAppearance="@style/home_font"
+        android:gravity="top"/>
+
+</RelativeLayout>
