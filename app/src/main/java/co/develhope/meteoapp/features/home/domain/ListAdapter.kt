@@ -1,4 +1,4 @@
-package co.develhope.meteoapp
+package co.develhope.meteoapp.features.home.domain
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -19,7 +19,7 @@ class ListAdapter(private val items:List<WeatherConditions>):RecyclerView.Adapte
     }
 
     inner class ViewHolder(private val binding: HomeScreenItemBinding) : RecyclerView.ViewHolder(binding.root){
-       fun binding (item:WeatherConditions){
+       fun binding (item: WeatherConditions){
            binding.currentDay.setText(item.day)
            binding.wcIcon.setImageResource(item.weather)
            binding.windValue.text = item.wind.toString()
