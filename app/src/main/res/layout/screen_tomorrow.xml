@@ -27,7 +27,7 @@
             android:id="@+id/today_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/today"
+            android:text="@string/tomorrow"
             android:textSize="@dimen/dimens20sp"
             android:textColor="@color/blue_text"
             android:textStyle="bold"
@@ -61,7 +61,7 @@
     <!--now hour info-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimens36dp"
+        android:layout_height="@dimen/dimens40dp"
         android:orientation="horizontal"
         android:layout_marginStart="@dimen/dimens24dp"
         android:layout_marginEnd="@dimen/dimens24dp">
@@ -77,7 +77,7 @@
             android:layout_gravity="center"/>
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/dimens40dp"
             android:layout_height="wrap_content"
             android:src="@drawable/sun"
             android:layout_marginEnd="@dimen/dimens40dp"

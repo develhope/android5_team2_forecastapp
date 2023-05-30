@@ -23,7 +23,7 @@
 
         <ImageView
             android:id="@+id/weather_image_item"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/dimens40dp"
             android:layout_height="wrap_content"
             android:src="@drawable/sun"
             android:layout_marginEnd="@dimen/dimens40dp"
