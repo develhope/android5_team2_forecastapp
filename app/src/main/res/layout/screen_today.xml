@@ -47,7 +47,7 @@
     <!--now hour info-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dimens40dp"
         android:orientation="horizontal"
         android:layout_marginTop="@dimen/dimens24dp"
         android:layout_marginStart="@dimen/dimens24dp"
@@ -60,14 +60,16 @@
             android:textSize="@dimen/dimens16sp"
             android:layout_marginEnd="@dimen/dimens40dp"
             android:fontFamily="@font/inter"
-            android:textColor="@color/blue_text"/>
+            android:textColor="@color/blue_text"
+            android:layout_gravity="center"/>
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/dimens40dp"
             android:layout_height="wrap_content"
             android:src="@drawable/sun"
             android:layout_marginEnd="@dimen/dimens40dp"
-            android:contentDescription="@string/sun" />
+            android:contentDescription="@string/sun"
+            android:layout_gravity="center"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -77,14 +79,16 @@
             android:layout_marginEnd="@dimen/dimens40dp"
             android:fontFamily="@font/inter"
             android:textStyle="bold"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:layout_gravity="center"/>
 
         <ImageView
             android:layout_width="@dimen/dimens27dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="@dimen/dimens8dp"
             android:contentDescription="@string/drop"
-            android:src="@drawable/fluent_drop_16_filled" />
+            android:src="@drawable/fluent_drop_16_filled"
+            android:layout_gravity="center"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -92,7 +96,8 @@
             android:fontFamily="@font/inter"
             android:text="@string/humidity_for_every_hours"
             android:textColor="@color/black"
-            android:textSize="@dimen/dimens20sp" />
+            android:textSize="@dimen/dimens20sp"
+            android:layout_gravity="center"/>
 
         <ImageView
             android:id="@+id/arrow_cardView"
@@ -106,6 +111,7 @@
 
     <!--card-->
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_today"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimens213dp"
         android:layout_marginVertical="@dimen/dimens24dp"
