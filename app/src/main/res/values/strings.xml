@@ -14,14 +14,14 @@
     <string name="max">max</string>
     <string name="rainfall">precip.</string>
     <!-- Giorni della settimana -->
-    <string name="tomorrow">Domani</string>
-    <string name="monday">Lunedì</string>
-    <string name="tuesday">Martedì</string>
-    <string name="wednesday">Mercoledì</string>
-    <string name="thursday">Giovedì</string>
-    <string name="friday">Venerdì</string>
-    <string name="saturday">Sabato</string>
-    <string name="sunday">Domenica</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
     <!-- bottom nav icons -->
     <string name="home_icon">Home</string>
     <string name="today_icon">Today</string>
