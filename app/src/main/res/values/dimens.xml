@@ -38,4 +38,5 @@
     <dimen name="dimens142dp">142dp</dimen>
     <dimen name="dimens153dp">153dp</dimen>
     <dimen name="dimens175dp">175dp</dimen>
+    <dimen name="dimens3dp">3dp</dimen>
 </resources>

@@ -6,8 +6,8 @@
     android:layout_height="@dimen/dimens48dp"
     android:orientation="vertical">
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/dimens48dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens36dp"
         android:orientation="horizontal"
         android:gravity="center_vertical">
 
@@ -63,6 +63,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens3dp"
         android:scaleType="fitXY"
         android:src="@drawable/vector_1" />
 
