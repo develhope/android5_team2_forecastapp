@@ -29,6 +29,15 @@ class TodayScreen : Fragment() {
 
         setUpLinearView()
 
+        binding.arrowCardView.setOnClickListener {
+            if (binding.cardViewToday.visibility == View.GONE) {
+                binding.cardViewToday.visibility = View.VISIBLE
+                binding.arrowCardView.animate().rotation(180f).start()
+            } else {
+                binding.cardViewToday.visibility = View.GONE
+                binding.arrowCardView.animate().rotation(0f).start()
+            }
+        }
     }
 
     private fun setUpLinearView(){
@@ -65,6 +74,5 @@ class TodayScreen : Fragment() {
             TodayWeatherCondition(R.string.hour11pm,R.drawable.moon,20,0),
         )
     }
-
 }
 

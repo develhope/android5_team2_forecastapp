@@ -125,6 +125,7 @@
 
     <!--card-->
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_tomorrow"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimens213dp"
         android:layout_marginVertical="@dimen/dimens24dp"

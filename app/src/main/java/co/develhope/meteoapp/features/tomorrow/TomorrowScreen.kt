@@ -27,6 +27,15 @@ class TomorrowScreen : Fragment() {
 
         setUpLinearView()
 
+        binding.arrowCardView.setOnClickListener {
+            if (binding.cardViewTomorrow.visibility == View.GONE) {
+                binding.cardViewTomorrow.visibility = View.VISIBLE
+                binding.arrowCardView.animate().rotation(180f).start()
+            } else {
+                binding.cardViewTomorrow.visibility = View.GONE
+                binding.arrowCardView.animate().rotation(0f).start()
+            }
+        }
     }
 
     private fun setUpLinearView(){
