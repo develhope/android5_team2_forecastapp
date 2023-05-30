@@ -23,4 +23,19 @@
     <dimen name="dimens254dp">254dp</dimen>
     <dimen name="dimens261dp">261dp</dimen>
     <dimen name="dimens342dp">342dp</dimen>
+    <dimen name="dimens48dp">48dp</dimen>
+    <dimen name="dimens40dp">40dp</dimen>
+    <dimen name="dimens16sp">16sp</dimen>
+    <dimen name="dimens20sp">20sp</dimen>
+    <dimen name="dimens27dp">27dp</dimen>
+    <dimen name="dimens36dp">36dp</dimen>
+    <dimen name="dimens213dp">213dp</dimen>
+    <dimen name="_dimens198dp">198dp</dimen>
+    <dimen name="dimens72dp">72dp</dimen>
+    <dimen name="dimens20dp">20dp</dimen>
+    <dimen name="dimens84dp">84dp</dimen>
+    <dimen name="dimens106dp">106dp</dimen>
+    <dimen name="dimens142dp">142dp</dimen>
+    <dimen name="dimens153dp">153dp</dimen>
+    <dimen name="dimens175dp">175dp</dimen>
 </resources>
