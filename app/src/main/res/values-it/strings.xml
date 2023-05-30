@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="sample_min_temperature">22°</string>
+    <string name="sample_date">10/09</string>
+    <string name="sample_mm">0mm</string>
+    <string name="sample_weather_icon">weather icon</string>
+    <string name="sample_kmh_placeholder">12kmh</string>
+    <string name="sample_max_temperature">31°</string>
+    <string name="sample_city_region">Palermo, Sicilia</string>
+    <!-- home page ui fixed values -->
+    <string name="next_5_days">Next 5 days</string>
+    <string name="min">min</string>
+    <string name="max">max</string>
+    <string name="rainfall">precip.</string>
+    <!-- Giorni della settimana -->
+    <string name="tomorrow">Domani</string>
+    <string name="monday">Lunedì</string>
+    <string name="tuesday">Martedì</string>
+    <string name="wednesday">Mercoledì</string>
+    <string name="thursday">Giovedì</string>
+    <string name="friday">Venerdì</string>
+    <string name="saturday">Sabato</string>
+    <string name="sunday">Domenica</string>
     <string name="app_name">meteoapp</string>
     <string name="home_icon">Home</string>
     <string name="today_icon">Oggi</string>
@@ -55,4 +76,9 @@
     <string name="hour11pm">23:00</string>
     <string name="error_message"> C’è stato un problema con il\n caricamento dei tuoi dati.\n Verifica la tua rete e riprova.</string>
     <string name="retry">Riprova</string>
+    <string name="recent_researches">Recent researches</string>
+    <string name="search_a_city">Search a city</string>
+    <string name="example_temperature_search">12°</string>
+    <string name="example_search_screen_city">Palermo</string>
+    <string name="screen_search_rainfall_text">precip</string>
 </resources>
