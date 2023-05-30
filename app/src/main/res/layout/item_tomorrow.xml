@@ -3,11 +3,11 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="48dp"
+    android:layout_height="@dimen/dimens48dp"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="46dp"
+        android:layout_height="@dimen/dimens48dp"
         android:orientation="horizontal"
         android:gravity="center_vertical">
 
@@ -15,18 +15,18 @@
             android:id="@+id/hour_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="40dp"
+            android:layout_marginEnd="@dimen/dimens40dp"
             android:fontFamily="@font/inter"
             android:text="@string/hour_for_every_hours"
             android:textColor="@color/blue_text"
-            android:textSize="16sp" />
+            android:textSize="@dimen/dimens16sp" />
 
         <ImageView
             android:id="@+id/weather_image_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/sun"
-            android:layout_marginEnd="40dp"
+            android:layout_marginEnd="@dimen/dimens40dp"
             android:contentDescription="@string/sun" />
 
         <TextView
@@ -34,28 +34,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/grade_for_every_hours"
-            android:textSize="20sp"
-            android:layout_marginEnd="1dp"
+            android:textSize="@dimen/dimens20sp"
+            android:layout_marginEnd="@dimen/dimens40dp"
             android:fontFamily="@font/inter"
             android:textStyle="bold"
             android:textColor="@color/black"/>
 
-        <TextView
-            android:id="@+id/grade_symbol"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="°"
-            android:textSize="22sp"
-            android:layout_marginEnd="40dp"
-            android:fontFamily="@font/inter"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
 
         <ImageView
             android:id="@+id/drop"
-            android:layout_width="27dp"
+            android:layout_width="@dimen/dimens27dp"
             android:layout_height="match_parent"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="@dimen/dimens8dp"
             android:contentDescription="@string/drop"
             android:src="@drawable/fluent_drop_16_filled" />
 
@@ -66,16 +56,7 @@
             android:fontFamily="@font/inter"
             android:text="@string/humidity_for_every_hours"
             android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/humidity_percentage_symbol"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter"
-            android:text="%"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/dimens20sp" />
 
     </LinearLayout>
 
