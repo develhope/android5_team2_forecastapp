@@ -1,304 +1,65 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/today_tomorrow_background">
 
-    <!--    title layout-->
-    <LinearLayout
+    <TextView
+        android:id="@+id/today_titleCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="@dimen/dimens40dp"
-        android:layout_marginStart="@dimen/dimens24dp"
-        android:layout_marginTop="@dimen/dimens36dp">
-        <TextView
-            android:id="@+id/today_titleCity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/city"
-            android:textSize="@dimen/dimens16sp"
-            android:textColor="@color/blue_text"
-            android:fontFamily="@font/inter" />
-
-        <TextView
-            android:id="@+id/today_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tomorrow"
-            android:textSize="@dimen/dimens20sp"
-            android:textColor="@color/blue_text"
-            android:textStyle="bold"
-            android:fontFamily="@font/inter" />
-
-        <TextView
-            android:id="@+id/today_titleDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/today_date"
-            android:textColor="@color/blue_text"
-            android:textSize="@dimen/dimens16sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/inter" />
-    </LinearLayout>
-
-    <!--sereno-->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimens24dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sereno"
-            android:textSize="@dimen/dimens16sp"
-            android:textColor="@color/blue_text"
-            android:fontFamily="@font/inter"/>
-    </LinearLayout>
-
-    <!--now hour info-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dimens40dp"
-        android:orientation="horizontal"
-        android:layout_marginStart="@dimen/dimens24dp"
-        android:layout_marginEnd="@dimen/dimens24dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/hour11"
-            android:textSize="@dimen/dimens16sp"
-            android:layout_marginEnd="@dimen/dimens40dp"
-            android:fontFamily="@font/inter"
-            android:textColor="@color/blue_text"
-            android:layout_gravity="center"/>
-
-        <ImageView
-            android:layout_width="@dimen/dimens40dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/sun"
-            android:layout_marginEnd="@dimen/dimens40dp"
-            android:contentDescription="@string/sun"
-            android:layout_gravity="center"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/grade_for_every_hours"
-            android:textSize="@dimen/dimens20sp"
-            android:layout_marginEnd="@dimen/dimens40dp"
-            android:fontFamily="@font/inter"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_gravity="center"/>
-
-        <ImageView
-            android:layout_width="@dimen/dimens27dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="@dimen/dimens8dp"
-            android:contentDescription="@string/drop"
-            android:src="@drawable/fluent_drop_16_filled"
-            android:layout_gravity="center"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter"
-            android:text="@string/humidity_for_every_hours"
-            android:textColor="@color/black"
-            android:textSize="@dimen/dimens20sp"
-            android:layout_gravity="center"/>
-
-        <ImageView
-            android:id="@+id/arrow_cardView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/arrow"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="@dimen/dimens10dp"/>
-
-
-    </LinearLayout>
-
-    <!--card-->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView_tomorrow"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dimens213dp"
-        android:layout_marginVertical="@dimen/dimens24dp"
-        android:layout_marginHorizontal="@dimen/dimens24dp"
-        app:cardBackgroundColor="@color/iceCardView"
-        android:elevation="@dimen/dimens24dp"
-        app:cardElevation="@dimen/dimens24dp"
-        app:cardCornerRadius="@dimen/dimens10dp"
-        android:background="@color/black">
-
-        <TextView
-            android:id="@+id/today_cardPerceived"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimens18dp"
-            android:layout_marginTop="@dimen/dimens18dp"
-            android:text="@string/perceived"
-            android:textColor="@color/black"
-            android:textSize="@dimen/dimens16sp"
-            android:fontFamily="@font/inter"/>
-
-        <TextView
-            android:id="@+id/today_cardPerceivedVal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimens18dp"
-            android:layout_marginTop="@dimen/dimens36dp"
-            android:text="@string/grade_perceived"
-            android:textColor="@color/black"
-            android:textSize="@dimen/dimens16sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/inter"/>
-
-        <TextView
-            android:id="@+id/today_cardUv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_dimens198dp"
-            android:layout_marginTop="@dimen/dimens18dp"
-            android:text="@string/UV"
-            android:textColor="@color/black"
-            android:textSize="@dimen/dimens16sp"
-            android:fontFamily="@font/inter"/>
-
-        <TextView
-            android:id="@+id/today_cardUvVal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_dimens198dp"
-            android:layout_marginTop="@dimen/dimens36dp"
-            android:text="@string/card_UV"
-            android:textColor="@color/black"
-            android:textSize="@dimen/dimens16sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/inter"/>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/vector_1"
-            android:layout_marginTop="@dimen/dimens72dp"
-            android:layout_marginStart="@dimen/dimens20dp"
-            android:layout_marginEnd="@dimen/dimens20dp" />
-
-        <TextView
-            android:id="@+id/today_cardHumidity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimens18dp"
-            android:layout_marginTop="@dimen/dimens84dp"
-            android:text="@string/humidity"
-            android:textColor="@color/black"
-            android:textSize="@dimen/dimens16sp"
-            android:fontFamily="@font/inter"/>
-
-        <TextView
-            android:id="@+id/today_cardHumidityVal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimens18dp"
-            android:layout_marginTop="@dimen/dimens106dp"
-            android:text="@string/humidity_percentage"
-            android:textColor="@color/black"
-            android:textSize="@dimen/dimens16sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/inter"/>
-
-        <TextView
-            android:id="@+id/today_cardWind"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_dimens198dp"
-            android:layout_marginTop="@dimen/dimens84dp"
-            android:text="@string/wind"
-            android:textColor="@color/black"
-            android:textSize="@dimen/dimens16sp"
-            android:fontFamily="@font/inter"/>
-
-        <TextView
-            android:id="@+id/today_cardWindVal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_dimens198dp"
-            android:layout_marginTop="@dimen/dimens106dp"
-            android:text="@string/wind_speed"
-            android:textColor="@color/black"
-            android:textSize="@dimen/dimens16sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/inter"/>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/vector_1"
-            android:layout_marginTop="@dimen/dimens142dp"
-            android:layout_marginStart="@dimen/dimens20dp"
-            android:layout_marginEnd="@dimen/dimens20dp" />
-
-        <TextView
-            android:id="@+id/today_cardCoverage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimens18dp"
-            android:layout_marginTop="@dimen/dimens153dp"
-            android:text="@string/cover"
-            android:textColor="@color/black"
-            android:textSize="@dimen/dimens16sp"
-            android:fontFamily="@font/inter"/>
-
-        <TextView
-            android:id="@+id/today_cardCoverageVal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimens18dp"
-            android:layout_marginTop="@dimen/dimens175dp"
-            android:layout_marginBottom="@dimen/dimens18dp"
-            android:text="@string/cover_percentage"
-            android:textColor="@color/black"
-            android:textSize="@dimen/dimens16sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/inter"/>
-
-        <TextView
-            android:id="@+id/today_cardRain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_dimens198dp"
-            android:layout_marginTop="@dimen/dimens153dp"
-            android:text="@string/rain"
-            android:textColor="@color/black"
-            android:textSize="@dimen/dimens16sp"
-            android:fontFamily="@font/inter"/>
-
-        <TextView
-            android:id="@+id/today_cardRainVal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_dimens198dp"
-            android:layout_marginTop="@dimen/dimens175dp"
-            android:text="@string/rain_cm"
-            android:textColor="@color/black"
-            android:textSize="@dimen/dimens16sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/inter"/>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/tomorrowRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:text="@string/city"
+        android:textSize="@dimen/dimens16sp"
+        android:textColor="@color/blue_text"
+        android:layout_marginTop="@dimen/dimens61dp"
         android:layout_marginStart="@dimen/dimens24dp"
         android:layout_marginEnd="@dimen/dimens24dp"
-        tools:listitem="@layout/item_tomorrow"
-        tools:itemCount="4"
-        />
+        android:fontFamily="@font/inter" />
+
+    <TextView
+        android:id="@+id/today_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tomorrow"
+        android:textSize="@dimen/dimens20sp"
+        android:textColor="@color/blue_text"
+        android:layout_marginStart="@dimen/dimens24dp"
+        android:layout_marginEnd="@dimen/dimens24dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter" />
+
+    <TextView
+        android:id="@+id/today_titleDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/today_date"
+        android:textColor="@color/blue_text"
+        android:layout_marginStart="@dimen/dimens24dp"
+        android:layout_marginEnd="@dimen/dimens24dp"
+        android:textSize="@dimen/dimens16sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter"
+        android:layout_marginTop="@dimen/dimens20dp"
+        android:text="Sereno"
+        android:textColor="@color/blue_text"
+        android:layout_marginStart="@dimen/dimens24dp"
+        android:layout_marginEnd="@dimen/dimens24dp"
+        android:textSize="@dimen/dimens16sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/todayTomorrowRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimens16dp"
+        android:layout_marginStart="@dimen/dimens24dp"
+        android:layout_marginEnd="@dimen/dimens24dp"
+        tools:listitem="@layout/item_today_tomorrow"
+        tools:itemCount="4" />
+
 </LinearLayout>
