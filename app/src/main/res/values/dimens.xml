@@ -40,4 +40,5 @@
     <dimen name="dimens175dp">175dp</dimen>
     <dimen name="dimens3dp">3dp</dimen>
     <dimen name="dimens61dp">61dp</dimen>
+    <dimen name="dimens30dp">30dp</dimen>
 </resources>
