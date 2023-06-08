@@ -15,7 +15,7 @@
         android:id="@+id/current_day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/today"
+        android:text=""
         android:textAppearance="@style/oggi"
         android:gravity="top"
         android:layout_marginStart="@dimen/dimens18dp"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimens50dp"
         android:layout_marginStart="@dimen/dimens18dp"
-        android:text="@string/sample_date"
+        android:text=""
         android:textAppearance="@style/some_id"
         android:gravity="top"/>
 
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dimens145dp"
         android:layout_marginTop="@dimen/dimens18dp"
-        android:text="@string/sample_min_temperature"
+        android:text=""
         android:textAppearance="@style/some_id"
         android:gravity="top"/>
 
@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dimens254dp"
         android:layout_marginTop="@dimen/dimens18dp"
-        android:text="@string/sample_max_temperature"
+        android:text=""
         android:textAppearance="@style/some_id"
         android:gravity="top"/>
 
@@ -93,7 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimens89dp"
         android:layout_marginStart="@dimen/dimens152dp"
-        android:text="@string/sample_mm"
+        android:text=""
         android:textAppearance="@style/some_id"
         android:gravity="top"/>
 
@@ -113,11 +113,12 @@
         android:id="@+id/wind_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimens261dp"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="@dimen/dimens89dp"
-        android:text="@string/sample_kmh_placeholder"
-        android:textAppearance="@style/some_id"
-        android:gravity="top"/>
+        android:layout_marginEnd="@dimen/dimens19dp"
+        android:gravity="top"
+        android:text=""
+        android:textAppearance="@style/some_id" />
 
     <!-- vento -->
     <TextView
