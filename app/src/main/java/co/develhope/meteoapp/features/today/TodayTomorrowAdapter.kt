@@ -28,6 +28,8 @@ class TodayTomorrowAdapter(private val item: List<TodayTomorrowWeatherCondition>
             binding.info.setOnClickListener {
                 if (binding.cardView.visibility == View.GONE) {
                     binding.cardView.visibility = View.VISIBLE
+                    binding.arrowCardView.rotation = 360F
+
                 } else {
                     binding.cardView.visibility = View.GONE
                     binding.arrowCardView.rotation = 180F
