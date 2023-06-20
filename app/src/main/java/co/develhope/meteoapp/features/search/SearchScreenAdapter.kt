@@ -3,7 +3,6 @@ package co.develhope.meteoapp.features.search
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import co.develhope.meteoapp.databinding.ScreenSearchBinding
 import co.develhope.meteoapp.databinding.SearchScreenItemBinding
 
 
