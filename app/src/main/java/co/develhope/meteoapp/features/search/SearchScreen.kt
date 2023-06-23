@@ -48,17 +48,24 @@ class SearchScreen : Fragment() {
         binding.searchWidget.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                if (!query.isNullOrEmpty()) {
-                    lifecycleScope.launch {
-                        val city = geoCoding.getGeoLocalization(query)
-                        adapter(city)
-                        Log.d("SearchScreen", "${city.results[0]}, $query")
-                    }
-                }
+//                if (!query.isNullOrEmpty()) {
+//                    lifecycleScope.launch {
+//                        val city = geoCoding.getGeoLocalization(query)
+//                        adapter(city)
+//                        Log.d("SearchScreen", "${city.results[0]}, $query")
+//                    }
+//                }
                 return true
             }
 
             override fun onQueryTextChange(p0: String?): Boolean {
+                if (!p0.isNullOrEmpty() && p0.length >= 3) {
+                    lifecycleScope.launch {
+                        val city = geoCoding.getGeoLocalization(p0)
+                        adapter(city)
+                        Log.d("SearchScreen", "${city.results[0]}, $p0")
+                    }
+                }
                 Log.d("SearchScreen"," $p0")
                 return true
             }
