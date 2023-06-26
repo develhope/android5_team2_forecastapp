@@ -1,37 +1,22 @@
 package co.develhope.meteoapp.features.search
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView
-import androidx.lifecycle.lifecycleScope
+import android.widget.Toast
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.ScreenSearchBinding
-import kotlinx.coroutines.launch
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.GET
-import retrofit2.http.Query
-
-
-data class Geo(val results : List<City>)
-data class City(val country :String,val timezone: String, val name: String?)
-interface GeoCoding {
-    @GET("v1/search")
-    suspend fun getGeoLocalization(@Query("name") name: String?): Geo
-}
+import co.develhope.meteoapp.features.search.domain.SearchCityResult
+import co.develhope.meteoapp.features.search.domain.SearchScreenAdapter
 
 class SearchScreen : Fragment() {
     private lateinit var binding: ScreenSearchBinding
-    private val retrofit = Retrofit.Builder()
-        .baseUrl("https://geocoding-api.open-meteo.com/")
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
-    private val geoCoding: GeoCoding = retrofit.create(GeoCoding::class.java)
-
+    private val viewModel: SearchCityViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -48,31 +33,38 @@ class SearchScreen : Fragment() {
         binding.searchWidget.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-//                if (!query.isNullOrEmpty()) {
-//                    lifecycleScope.launch {
-//                        val city = geoCoding.getGeoLocalization(query)
-//                        adapter(city)
-//                        Log.d("SearchScreen", "${city.results[0]}, $query")
-//                    }
-//                }
+                if (query?.length!! >= 4) {
+                    viewModel.getCities(query)
+                    viewModel.searchCitiesLiveData.observe(viewLifecycleOwner) {
+                        showCities(it)
+                    }
+                } else {
+                    Toast.makeText(context, getString(R.string.error_search_too_short), Toast.LENGTH_SHORT).show()
+                }
                 return true
             }
 
             override fun onQueryTextChange(p0: String?): Boolean {
-                if (!p0.isNullOrEmpty() && p0.length >= 3) {
-                    lifecycleScope.launch {
-                        val city = geoCoding.getGeoLocalization(p0)
-                        adapter(city)
-                        Log.d("SearchScreen", "${city.results[0]}, $p0")
-                    }
+                if (p0.isNullOrEmpty() || p0.length <= 3) {
+                    emptyTheList()
                 }
-                Log.d("SearchScreen"," $p0")
                 return true
             }
         })
     }
-    private fun adapter(city: Geo){
-        binding.searchRecyclerview.layoutManager = LinearLayoutManager(context)
-        binding.searchRecyclerview.adapter = SearchScreenAdapter(city,city.results)
+
+    private fun showCities(city: SearchCityResult) {
+        if (city.results != null) {
+            binding.searchRecyclerview.layoutManager = LinearLayoutManager(context)
+            binding.searchRecyclerview.adapter = SearchScreenAdapter(city, city.results)
+        } else {
+            Toast.makeText(context,getString(R.string.error_search_invalid_city),Toast.LENGTH_SHORT).show()
+            emptyTheList()
+        }
+    }
+
+    private fun emptyTheList() {
+        binding.searchRecyclerview.adapter =
+            SearchScreenAdapter(SearchCityResult(emptyList()), emptyList())
     }
 }

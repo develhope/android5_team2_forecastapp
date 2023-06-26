@@ -81,4 +81,6 @@
     <string name="example_temperature_search">12°</string>
     <string name="example_search_screen_city">Palermo</string>
     <string name="screen_search_rainfall_text">precip</string>
+    <string name="error_search_too_short">Inserire almeno 4 lettere</string>
+    <string name="error_search_invalid_city">Nessuna città trovata con questo nome</string>
 </resources>
