@@ -3,7 +3,6 @@ package co.develhope.meteoapp.features.search
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import co.develhope.meteoapp.features.search.domain.City
 import co.develhope.meteoapp.features.search.domain.SearchCityResult
 import co.develhope.meteoapp.features.search.network.SearchCityApi
 import kotlinx.coroutines.CoroutineScope
