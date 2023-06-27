@@ -82,4 +82,6 @@
     <string name="hour11pm">11:00 pm</string>
     <string name="error_message"> There was a problem with uploading your data.n Please check your network and try again.</string>
     <string name="retry">Retry</string>
+    <string name="error_search_too_short">Insert atleast 4 letters</string>
+    <string name="error_search_invalid_city">No valid city found</string>
 </resources>
