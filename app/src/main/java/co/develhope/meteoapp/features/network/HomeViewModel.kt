@@ -1,26 +1,36 @@
 package co.develhope.meteoapp.features.network
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import co.develhope.meteoapp.features.home.domain.WeatherConditions
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.time.OffsetDateTime
 
 private const val BASE_URL = "https://api.open-meteo.com/"
 
+@RequiresApi(Build.VERSION_CODES.O)
 class HomeViewModel : ViewModel() {
 
     private val weeklyWeatherApi: WeeklyWeatherApi
     private val _weeklyWeatherLiveData = MutableLiveData<WeatherConditions>()
     val weeklyWeatherLiveData: LiveData<WeatherConditions> = _weeklyWeatherLiveData
 
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun provideGson(): Gson = GsonBuilder()
+        .registerTypeAdapter(OffsetDateTime::class.java, OffsetDateTimeTypeAdapter())
+        .create()
     init {
         val retrofit = Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(
-            GsonConverterFactory.create()
+            GsonConverterFactory.create(provideGson())
         ).build()
 
         weeklyWeatherApi = retrofit.create(WeeklyWeatherApi::class.java)

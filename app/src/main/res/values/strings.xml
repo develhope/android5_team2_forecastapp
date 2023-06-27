@@ -7,7 +7,7 @@
     <string name="sample_weather_icon">weather icon</string>
     <string name="sample_kmh_placeholder">12kmh</string>
     <string name="sample_max_temperature">31°</string>
-    <string name="sample_city_region">Palermo, Sicilia</string>
+    <string name="sample_city_region">Catania, Sicilia</string>
     <!-- home page ui fixed values -->
     <string name="next_5_days">Next 5 days</string>
     <string name="min">min</string>
@@ -34,7 +34,7 @@
     <string name="example_search_screen_city">Palermo</string>
     <string name="screen_search_rainfall_text">precip</string>
     <string name="city">Palermo,Sicily</string>
-    <string name="today">Today,</string>
+    <string name="today">Today</string>
     <string name="today_date">Sunday 10 september</string>
     <string name="hour_now">11:00</string>
     <string name="grade_now">31°</string>
@@ -42,7 +42,7 @@
     <string name="perceived">Perceived</string>
     <string name="UV">UV Index</string>
     <string name="humidity">Humidity</string>
-    <string name="wind">Wind</string>
+    <string name="wind">wind</string>
     <string name="cover">Cover</string>
     <string name="rain">Rain</string>
     <string name="grade_perceived">45°</string>

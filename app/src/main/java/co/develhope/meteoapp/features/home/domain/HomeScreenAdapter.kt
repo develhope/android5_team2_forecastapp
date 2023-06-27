@@ -5,9 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.HomeScreenItemBinding
+import co.develhope.meteoapp.features.network.DateUtils.getDayOfWeek
+import co.develhope.meteoapp.features.network.DateUtils.getMonthAndDay
 
-class ListAdapter(private val items: WeatherConditions) :
-    RecyclerView.Adapter<ListAdapter.ViewHolder>() {
+
+
+class HomeScreenAdapter(private val items: WeatherConditions) :
+    RecyclerView.Adapter<HomeScreenAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemBinding =
@@ -24,23 +28,29 @@ class ListAdapter(private val items: WeatherConditions) :
     inner class ViewHolder(private val binding: HomeScreenItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun binding(item: WeatherConditions, position: Int) {
-            val maxTemperature = item.daily.maxTemperature[position]
-            val minTemperature = item.daily.minTemperature[position]
-            val date = item.daily.time[position]
-            val rain = item.daily.rainSum[position]
-            val wind = item.daily.windMax[position]
+            val usedPosition = position + 1
+            val maxTemperature = item.daily.maxTemperature[usedPosition]
+            val minTemperature = item.daily.minTemperature[usedPosition]
+            val date = item.daily.time[usedPosition]
+            val rain = item.daily.rainSum[usedPosition]
+            val wind = item.daily.windMax[usedPosition]
+            val monthAndDay = getMonthAndDay(date)
+            val specificDay = getDayOfWeek(date)
+            binding.currentDay.text = specificDay
             binding.maxTemperatureValue.text = maxTemperature.toString().plus("°")
             binding.minTemperatureValue.text = minTemperature.toString().plus("°")
-            binding.dayAndMonth.text = date
+            if (position == 0) {
+                binding.currentDay.setText(R.string.tomorrow)
+            }
+            binding.dayAndMonth.text = monthAndDay
             binding.rainfallValue.text = rain.toString().plus("mm")
             binding.windValue.text = wind.toString().plus("km/h")
 //            TODO add correct weather images corresponding to each weathercode
-            when(item.daily.weathercode[position]){
+            when (item.daily.weathercode[usedPosition]) {
                 0 -> binding.wcIcon.setImageResource(R.drawable.wc_sun)
                 in 1..3 -> binding.wcIcon.setImageResource(R.drawable.wc_sun_cloud)
-                else ->  binding.wcIcon.setImageResource(R.drawable.wc_rain_cloud)
+                else -> binding.wcIcon.setImageResource(R.drawable.wc_rain_cloud)
             }
         }
     }
-
 }
