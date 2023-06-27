@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.ScreenTodayBinding
 import co.develhope.meteoapp.features.data.ForecastResult
-import co.develhope.meteoapp.features.home.domain.ListAdapter
 import co.develhope.meteoapp.features.home.domain.WeatherConditions
 import co.develhope.meteoapp.features.network.HomeViewModel
 
