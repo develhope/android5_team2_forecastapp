@@ -15,7 +15,8 @@
         android:id="@+id/current_day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="today"
+        android:textSize="20sp"
         android:textAppearance="@style/oggi"
         android:gravity="top"
         android:layout_marginStart="@dimen/dimens18dp"
@@ -59,7 +60,7 @@
         android:id="@+id/max_temperature_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimens254dp"
+        android:layout_marginStart="@dimen/dimens261dp"
         android:layout_marginTop="@dimen/dimens18dp"
         android:text=""
         android:textAppearance="@style/some_id"
@@ -70,7 +71,7 @@
         android:id="@+id/max_temperature_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimens254dp"
+        android:layout_marginStart="@dimen/dimens261dp"
         android:layout_marginTop="@dimen/dimens46dp"
         android:text="@string/max"
         android:textAppearance="@style/home_font"
@@ -91,11 +92,11 @@
         android:id="@+id/rainfall_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens145dp"
         android:layout_marginTop="@dimen/dimens89dp"
-        android:layout_marginStart="@dimen/dimens152dp"
+        android:gravity="top"
         android:text=""
-        android:textAppearance="@style/some_id"
-        android:gravity="top"/>
+        android:textAppearance="@style/some_id" />
 
     <!-- precip. -->
     <TextView
@@ -103,7 +104,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimens117dp"
-        android:layout_marginStart="@dimen/dimens152dp"
+        android:layout_marginStart="@dimen/dimens145dp"
         android:text="@string/rainfall"
         android:textAppearance="@style/home_font"
         android:gravity="top"/>

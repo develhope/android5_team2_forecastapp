@@ -6,71 +6,74 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal">
+
         <LinearLayout
             android:id="@+id/info"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimens48dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/hour_item"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/dimens50dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/hour_for_every_hours"
-                    android:textSize="@dimen/dimens16sp"
-                    android:layout_marginEnd="@dimen/dimens32dp"
                     android:fontFamily="@font/inter"
-                    android:textColor="@color/blue_text"/>
+                    android:text="@string/hour_for_every_hours"
+                    android:layout_marginEnd="@dimen/dimens20dp"
+                    android:textColor="@color/blue_text"
+                    android:textSize="@dimen/dimens16sp" />
 
                 <ImageView
                     android:id="@+id/weather_image_item"
                     android:layout_width="@dimen/dimens40dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/sun"
-                    android:layout_marginEnd="@dimen/dimens32dp"
-                    android:contentDescription="@string/sun" />
+                    android:layout_height="@dimen/dimens40dp"
+                    android:contentDescription="@string/sun"
+                    android:layout_marginEnd="@dimen/dimens20dp"
+                    android:src="@drawable/sun" />
 
                 <TextView
                     android:id="@+id/grade_item"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/dimens50dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/grade_for_every_hours"
-                    android:textSize="@dimen/dimens20sp"
-                    android:layout_marginEnd="@dimen/dimens32dp"
                     android:fontFamily="@font/inter"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:text="@string/grade_for_every_hours"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimens20sp"
+                    android:layout_marginEnd="@dimen/dimens20dp"
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/drop"
                     android:layout_width="@dimen/dimens27dp"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="@dimen/dimens8dp"
                     android:contentDescription="@string/drop"
                     android:src="@drawable/fluent_drop_16_filled" />
 
                 <TextView
                     android:id="@+id/humidity_percentage_item"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/dimens40dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inter"
                     android:text="@string/humidity_for_every_hours"
                     android:textColor="@color/black"
+                    android:layout_marginEnd="@dimen/dimens20dp"
                     android:textSize="@dimen/dimens20sp" />
 
                 <ImageView
                     android:id="@+id/arrow_cardView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/dimens40dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="@dimen/dimens32dp"
                     android:rotation="180"
                     android:src="@drawable/arrow" />
 
         </LinearLayout>
 
         <ImageView
+            android:id="@+id/vector"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimens10dp"
