@@ -13,6 +13,7 @@ data class Hourly2(
     val cloudcover: List<Int>,
     @SerializedName("windspeed_10m") val windspeed10m: List<Double>,
     @SerializedName("uv_index") val uvIndex: List<Double>,
-    @SerializedName("is_day") val isDay: List<Int>
-    )
+    @SerializedName("is_day") val isDay: List<Int>,
+    @SerializedName("winddirection_10m") val windDirection: List<Int>
+)
 

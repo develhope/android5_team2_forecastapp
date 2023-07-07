@@ -43,7 +43,7 @@
     <string name="grade_perceived">45°</string>
     <string name="card_UV">5/10</string>
     <string name="humidity_percentage">60%</string>
-    <string name="wind_speed">SSE 7Km/h</string>
+    <string name="wind_speed">7Km/h</string>
     <string name="cover_percentage">24%</string>
     <string name="rain_cm">0cm</string>
     <string name="hour_for_every_hours">12:00</string>
@@ -61,4 +61,15 @@
     <string name="error_search_too_short">Inserire almeno 4 lettere</string>
     <string name="clear">Sereno</string>
     <string name="error_search_invalid_city">Nessuna città trovata con questo nome</string>
+
+    <!--    wind direction-->
+    <string name="NNE">NNE</string>
+    <string name="ENE">ENE</string>
+    <string name="ESE">ESE</string>
+    <string name="SSE">SSE</string>
+    <string name="SSW">SSO</string>
+    <string name="WSW">OSO</string>
+    <string name="WNW">ONO</string>
+    <string name="NNW">NNO</string>
+
 </resources>
