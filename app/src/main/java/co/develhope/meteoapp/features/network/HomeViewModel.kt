@@ -36,19 +36,15 @@ class HomeViewModel : ViewModel() {
         weeklyWeatherApi = retrofit.create(WeeklyWeatherApi::class.java)
     }
 
+//    ho cambiato un po' la funziona per avere in ingresso latitude and longitude, al primissimo avvio dell'app, la chiamata va a 0 0
     fun retrieveMeteo(
-//        TODO         add a way to insert the correct query parameters needed, currently using Catania params
-//        latitude: Double,
-//        longitude: Double,
-//        daily: String,
-//        currentWeather: Boolean,
-//        timezone: String
+        latitude: Double? = 0.0, longitude: Double? = 0.0
     ) {
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val meteo = weeklyWeatherApi.getWeeklyMeteo(
-                    37.49 ,
-                    15.07,
+                    latitude ,
+                    longitude,
                     "weathercode,temperature_2m_max,temperature_2m_min,rain_sum,windspeed_10m_max",
                     true,
                     "Europe/Berlin"

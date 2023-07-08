@@ -5,10 +5,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import co.develhope.meteoapp.databinding.SearchScreenItemBinding
+import co.develhope.meteoapp.features.SharedPreferencesHelper
 
 
-
-class SearchScreenAdapter(private val items: SearchCityResult, private val cities: List<City>) : RecyclerView.Adapter<SearchScreenAdapter.ViewHolder>() {
+class SearchScreenAdapter(private val items: SearchCityResult, private val cities: List<City>,private val sharedPreferencesHelper:SharedPreferencesHelper) : RecyclerView.Adapter<SearchScreenAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemBinding = SearchScreenItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(itemBinding)
@@ -24,6 +24,7 @@ class SearchScreenAdapter(private val items: SearchCityResult, private val citie
     }
 
     inner class ViewHolder (private val binding : SearchScreenItemBinding) : RecyclerView.ViewHolder(binding.root){
+
         fun binding(item: SearchCityResult, position: Int){
             val name = item.results[position].name
             val country = item.results[position].country
@@ -34,7 +35,11 @@ class SearchScreenAdapter(private val items: SearchCityResult, private val citie
         }
         fun clicking(item: City){
             binding.searchItem.setOnClickListener {
-                Toast.makeText(binding.searchItem.context , "latitude:${item.latitude} longitude:${item.longitude}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(binding.searchItem.context , "Retrieving the weather forecast for ${item.name}, ${item.admin1}", Toast.LENGTH_SHORT).show()
+                sharedPreferencesHelper.saveLatitude(item.latitude)
+                sharedPreferencesHelper.saveLongitude(item.longitude)
+                sharedPreferencesHelper.saveCityName(item.name)
+                sharedPreferencesHelper.saveCountry(item.admin1)
             }
         }
     }
