@@ -1,14 +1,18 @@
 package co.develhope.meteoapp.features.tomorrow
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import co.develhope.meteoapp.features.data.ForecastAPI
 import co.develhope.meteoapp.features.data.ForecastResult
+import co.develhope.meteoapp.features.network.DateUtils
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.time.LocalDate
 
 class TomorrowViewModel : ViewModel() {
 
@@ -17,6 +21,9 @@ class TomorrowViewModel : ViewModel() {
     private val _forecastLiveData = MutableLiveData<ForecastResult>()
 
     val forecastLiveData: LiveData<ForecastResult> = _forecastLiveData
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    private val tomorrowDate = DateUtils.getYearMonthAndDay("${LocalDate.now().plusDays(1)}")
 
     init {
         val retrofit = Retrofit.Builder()
@@ -27,11 +34,12 @@ class TomorrowViewModel : ViewModel() {
         forecastAPI = retrofit.create(ForecastAPI::class.java)
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     fun downloadForecastInfo() {
         viewModelScope.launch {
             try {
-                val meteoInfo = forecastAPI.getForecast()
-                _forecastLiveData.postValue(meteoInfo)
+                val forecastInfoTomorrow = forecastAPI.getForecast(tomorrowDate,tomorrowDate)
+                _forecastLiveData.postValue(forecastInfoTomorrow)
             } catch (e: Exception) {
 //               TODO ADD ERROR MANAGEMENT
             }
