@@ -29,8 +29,8 @@ class HomeScreenAdapter(private val items: WeatherConditions) :
         RecyclerView.ViewHolder(binding.root) {
         fun binding(item: WeatherConditions, position: Int) {
             val usedPosition = position + 1
-            val maxTemperature = item.daily.maxTemperature[usedPosition]
-            val minTemperature = item.daily.minTemperature[usedPosition]
+            val maxTemperature = item.daily.maxTemperature[usedPosition].toInt()
+            val minTemperature = item.daily.minTemperature[usedPosition].toInt()
             val date = item.daily.time[usedPosition]
             val rain = item.daily.rainSum[usedPosition]
             val wind = item.daily.windMax[usedPosition]

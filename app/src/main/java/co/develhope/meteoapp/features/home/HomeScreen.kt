@@ -52,8 +52,8 @@ class HomeScreen : Fragment() {
     }
 
     fun showTodaysMeteo(item: WeatherConditions, sharedPreferencesHelper:SharedPreferencesHelper,position: Int = 0) {
-        val maxTemperature = item.daily.maxTemperature[position]
-        val minTemperature = item.daily.minTemperature[position]
+        val maxTemperature = item.daily.maxTemperature[position].toInt()
+        val minTemperature = item.daily.minTemperature[position].toInt()
         val date = item.daily.time[position]
         val rain = item.daily.rainSum[position]
         val wind = item.daily.windMax[position]

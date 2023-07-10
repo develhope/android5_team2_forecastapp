@@ -14,8 +14,8 @@ import co.develhope.meteoapp.databinding.ScreenTodayBinding
 import co.develhope.meteoapp.features.data.ForecastResult
 import co.develhope.meteoapp.features.network.DateUtils
 import java.time.LocalDate
-import java.util.Calendar
-import java.util.Locale
+import java.time.LocalTime
+
 
 
 class TodayScreen : Fragment() {
@@ -26,6 +26,8 @@ class TodayScreen : Fragment() {
 
     @RequiresApi(Build.VERSION_CODES.O)
     private val currentDate = DateUtils.getDateForTodayAndTomorrowScreen("${LocalDate.now()}")
+    @RequiresApi(Build.VERSION_CODES.O)
+    private val currentHour = LocalTime.now().hour
 
 
     override fun onCreateView(
@@ -53,10 +55,12 @@ class TodayScreen : Fragment() {
 
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun showTodayMeteo(meteo: ForecastResult){
         binding.todayTomorrowRecyclerView.apply {
             binding.todayTomorrowRecyclerView.layoutManager = LinearLayoutManager(context)
             binding.todayTomorrowRecyclerView.adapter = TodayTomorrowAdapter(meteo)
+            binding.todayTomorrowRecyclerView.scrollToPosition(currentHour)
         }
     }
 }
