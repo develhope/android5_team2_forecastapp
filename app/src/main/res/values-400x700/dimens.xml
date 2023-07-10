@@ -32,7 +32,7 @@
     <dimen name="dimens32sp">24.8sp</dimen>
     <dimen name="dimens36dp">27dp</dimen>
     <dimen name="dimens213dp">165dp</dimen>
-    <dimen name="dimens198dp">153dp</dimen>
+    <dimen name="dimens198dp">140dp</dimen>
     <dimen name="dimens72dp">56dp</dimen>
     <dimen name="dimens20dp">15.5dp</dimen>
     <dimen name="dimens84dp">65dp</dimen>
@@ -44,5 +44,5 @@
     <dimen name="dimens61dp">43dp</dimen>
     <dimen name="dimens30dp">23dp</dimen>
     <dimen name="dimens19dp">14.7dp</dimen>
-    <dimen name="dimens233dp">177.5dp</dimen>
+    <dimen name="dimens240dp">175dp</dimen>
 </resources>

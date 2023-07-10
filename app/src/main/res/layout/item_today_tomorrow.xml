@@ -197,7 +197,7 @@
                     android:id="@+id/cardWindVal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dimens233dp"
+                    android:layout_marginStart="@dimen/dimens240dp"
                     android:layout_marginTop="@dimen/dimens106dp"
                     android:text="@string/wind_speed"
                     android:textColor="@color/black"
