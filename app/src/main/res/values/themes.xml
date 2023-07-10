@@ -22,24 +22,24 @@
         <!-- Customize your theme here. -->
     </style>
     <style name="oggi">
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">@dimen/dimens20sp</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
     <style name="some_id">
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/dimens20sp</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
     <style name="home_font">
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">@dimen/dimens15sp</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
     <style name="prossimi_5_">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/dimens16sp</item>
         <item name="android:letterSpacing">0.07</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
     <style name="city_name">
-        <item name="android:textSize">32sp</item>
+        <item name="android:textSize">@dimen/dimens32sp</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
 </resources>

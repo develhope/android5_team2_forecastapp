@@ -16,7 +16,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="today"
-        android:textSize="20sp"
         android:textAppearance="@style/oggi"
         android:gravity="top"
         android:layout_marginStart="@dimen/dimens18dp"
@@ -80,8 +79,8 @@
     <!-- sun -->
     <ImageView
         android:id="@+id/wc_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/dimens50dp"
+        android:layout_height="@dimen/dimens50dp"
         android:src="@drawable/wc_sun"
         android:contentDescription="@string/sample_weather_icon"
         android:layout_marginStart="@dimen/dimens18dp"
