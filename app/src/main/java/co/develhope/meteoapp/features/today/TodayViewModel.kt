@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import co.develhope.meteoapp.features.SharedPreferencesHelper
 import co.develhope.meteoapp.features.data.ForecastAPI
 import co.develhope.meteoapp.features.data.ForecastResult
 import co.develhope.meteoapp.features.network.DateUtils
@@ -14,7 +15,8 @@ import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.time.LocalDate
-import java.util.Calendar
+import java.time.LocalDateTime
+import java.time.LocalTime
 
 class TodayViewModel : ViewModel() {
 
@@ -37,11 +39,16 @@ class TodayViewModel : ViewModel() {
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun downloadForecastInfo(){
+    fun downloadForecastInfo(sharedPreferencesHelper: SharedPreferencesHelper){
         viewModelScope.launch {
             try {
-                Log.d("todayDate","${LocalDate.now()}")
-                val forecastInfo = forecastAPI.getForecast(today,today)
+                val forecastInfo = forecastAPI.getForecast(
+                    sharedPreferencesHelper.getLatitude(),
+                    sharedPreferencesHelper.getLongitude(),
+                    true ,
+                    "auto",
+                    today,
+                    today)
                 _forecastLiveData.postValue(forecastInfo)
             } catch (e: Exception){
 //               TODO ADD ERROR MANAGEMENT

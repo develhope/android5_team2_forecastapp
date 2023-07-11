@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import co.develhope.meteoapp.features.SharedPreferencesHelper
 import co.develhope.meteoapp.features.data.ForecastAPI
 import co.develhope.meteoapp.features.data.ForecastResult
 import co.develhope.meteoapp.features.network.DateUtils
@@ -35,10 +36,16 @@ class TomorrowViewModel : ViewModel() {
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun downloadForecastInfo() {
+    fun downloadForecastInfo(sharedPreferencesHelper: SharedPreferencesHelper) {
         viewModelScope.launch {
             try {
-                val forecastInfoTomorrow = forecastAPI.getForecast(tomorrowDate,tomorrowDate)
+                val forecastInfoTomorrow = forecastAPI.getForecast(
+                    sharedPreferencesHelper.getLatitude(),
+                    sharedPreferencesHelper.getLongitude(),
+                    true ,
+                    "auto",
+                    tomorrowDate,
+                    tomorrowDate)
                 _forecastLiveData.postValue(forecastInfoTomorrow)
             } catch (e: Exception) {
 //               TODO ADD ERROR MANAGEMENT

@@ -10,7 +10,7 @@
     <string name="sample_max_temperature">31°</string>
     <string name="sample_city_region">Catania, Sicilia</string>
     <!-- home page ui fixed values -->
-    <string name="next_5_days">Next 5 days</string>
+    <string name="next_5_days">Prossimi 5 giorni</string>
     <string name="min">min</string>
     <string name="max">max</string>
     <string name="rainfall">precip.</string>
@@ -59,7 +59,6 @@
     <string name="example_search_screen_city">Palermo</string>
     <string name="screen_search_rainfall_text">precip</string>
     <string name="error_search_too_short">Inserire almeno 4 lettere</string>
-    <string name="clear">Sereno</string>
     <string name="error_search_invalid_city">Nessuna città trovata con questo nome</string>
 
     <!--    wind direction-->
@@ -71,5 +70,39 @@
     <string name="WSW">OSO</string>
     <string name="WNW">ONO</string>
     <string name="NNW">NNO</string>
+
+    <!--    forecast info-->
+    <string name="clear">Clear sky</string>
+    <string name="mainly_clear">Prevalentemente sereno</string>
+    <string name="partly_cloudy">Parzialmente Nuvoloso</string>
+    <string name="overcast">Nuvoloso</string>
+    <string name="fog">Nebbia</string>
+    <string name="depositing_rime_fog">Deposito nebbia di rima</string>
+    <string name="drizzle_light"> Pioggerella leggera</string>
+    <string name="drizzle_moderate">Pioggerella moderata</string>
+    <string name="drizzle_dense">Pioggerella fitta</string>
+    <string name="freezing_drizzle_light">Pioggerella gelata intensità leggera</string>
+    <string name="freezing_drizzle_dense">Pioggerella gelata intensità fitta</string>
+    <string name="slight_rain">Pioggia intensità leggera</string>
+    <string name="moderate_rain">Pioggia intensità moderata</string>
+    <string name="heavy_rain">Pioggia intensità forte</string>
+
+    <string name="freezing_light_rain">Pioggia leggera gelata</string>
+    <string name="freezing_heavy_intensity_rain">Pioggia gelata alta intensità</string>
+    <string name="slight_snow">Nevicata leggera</string>
+    <string name="moderate_snow">Nevicata moderata</string>
+    <string name="heavy_snow">Forti nevicate</string>
+    <string name="snow_grains">Grandine</string>
+    <string name="slight_rain_shower">Leggera pioggia</string>
+    <string name="moderate_rain_shower">Pioggia moderata</string>
+    <string name="violent_rain_shower">Pioggia forte</string>
+    <string name="slight_snow_shower">Neve leggera</string>
+    <string name="heavy_snow_shower">Neve Intensa</string>
+    <string name="thunderstorm_slight_moderate">temporale lieve moderato</string>
+    <string name="thunderstorm_with_slight_hail">temporale con leggera grandine</string>
+    <string name="thunderstorm_with_heavy_hail">temporale con forte grandine</string>
+    <string name="error">error</string>
+
+    <string name="null_city">Vai sulla ricerca per cercare una città</string>
 
 </resources>
