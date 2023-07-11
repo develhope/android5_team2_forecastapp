@@ -58,7 +58,6 @@
     <string name="drop">drop</string>
     <string name="error_message"> There was a problem with uploading your data. Please check your network and try again.</string>
     <string name="retry">Retry</string>
-    <string name="clear">Clear</string>
     <string name="error_search_too_short">Insert atleast 4 letters</string>
     <string name="error_search_invalid_city">No valid city found</string>
 
@@ -72,5 +71,37 @@
     <string name="WNW">WNW</string>
     <string name="NNW">NNW</string>
 
+    <!--    forecast info-->
+    <string name="clear">Clear sky</string>
+    <string name="mainly_clear">Mainly clear</string>
+    <string name="partly_cloudy">partly cloudy</string>
+    <string name="overcast">Overcast</string>
+    <string name="fog">Fog</string>
+    <string name="depositing_rime_fog">Depositing rime fog</string>
+    <string name="drizzle_light">Drizzle light intensity</string>
+    <string name="drizzle_moderate">Drizzle moderate intensity</string>
+    <string name="drizzle_dense">Drizzle dense intensity</string>
+    <string name="freezing_drizzle_light">Freezing drizzle light intensity</string>
+    <string name="freezing_drizzle_dense">Freezing drizzle dense intensity</string>
+    <string name="slight_rain">Slight rain intensity</string>
+    <string name="moderate_rain">Moderate rain intensity</string>
+    <string name="heavy_rain">Heavy rain intensity</string>
+    <string name="freezing_light_rain">Freezing light rain</string>
+    <string name="freezing_heavy_intensity_rain">Freezing heavy intensity rain</string>
+    <string name="slight_snow">Slight snow</string>
+    <string name="moderate_snow">Moderate snow</string>
+    <string name="heavy_snow">Heavy snow</string>
+    <string name="snow_grains">Snow grains</string>
+    <string name="slight_rain_shower">Slight rain shower</string>
+    <string name="moderate_rain_shower">Moderate rain shower</string>
+    <string name="violent_rain_shower">Violent rain shower</string>
+    <string name="slight_snow_shower">Slight snow shower</string>
+    <string name="heavy_snow_shower">Heavy snow shower</string>
+    <string name="thunderstorm_slight_moderate">Thunderstorm slight moderate</string>
+    <string name="thunderstorm_with_slight_hail">Thunderstorm with slight hail</string>
+    <string name="thunderstorm_with_heavy_hail">Thunderstorm with heavy hail</string>
+    <string name="error">error</string>
+
+    <string name="null_city">Search a city in search screen</string>
 
 </resources>
