@@ -2,7 +2,13 @@ package co.develhope.meteoapp.features.data
 
 import com.google.gson.annotations.SerializedName
 
-data class Hourly2(
+
+data class WeatherConditions(
+    val hourly: Hourly,
+    val daily: Daily
+)
+
+data class Hourly(
     val time: List<String>,
     @SerializedName("temperature_2m") var temperature: List<Double>,
     @SerializedName("relativehumidity_2m") val relativeHumidity: List<Int>,
@@ -17,3 +23,12 @@ data class Hourly2(
     @SerializedName("winddirection_10m") val windDirection: List<Int>
 )
 
+data class Daily(
+    val weathercode: List<Int>,
+    val time: List<String>,
+    @SerializedName("temperature_2m_max") val maxTemperature: List<Double>,
+    @SerializedName("temperature_2m_min") val minTemperature: List<Double>,
+    @SerializedName("rain_sum") val rainSum: List<Double>,
+    @SerializedName("windspeed_10m_max") val windMax: List<Double>,
+    val dayWeek: List<String>
+)

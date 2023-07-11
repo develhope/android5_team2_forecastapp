@@ -1,6 +1,5 @@
 package co.develhope.meteoapp.features.data
 
-import co.develhope.meteoapp.features.home.domain.Hourly
 import com.google.gson.annotations.SerializedName
 
 data class ForecastResult(
@@ -12,6 +11,24 @@ data class ForecastResult(
     @SerializedName("timezone_abbreviation") val timezoneAbbreviation: String,
     val elevation: Double,
     @SerializedName("hourly_units") val hourlyHunits: HourlyUnits,
-    val hourly: Hourly2,
+    val hourly: Hourly,
     @SerializedName("current_weather") val currentWeather: CurrentWeather,
+)
+
+data class HourlyUnits(
+    val time: String,
+    @SerializedName("temperature_2m") val temperatureIUnit: String,
+    @SerializedName("relativehumidity_2m") val humidityUnit: String,
+    val rain: String,
+    val cloudcover: String,
+    @SerializedName("windspeed_10m") val windSpeedUnit: String,
+    @SerializedName("uv_index") val uvIndexUnit: String,
+)
+
+data class CurrentWeather(
+    val temperature: Double,
+    val windSpeed: Double,
+    val weathercode: Int,
+    @SerializedName("is_day") val isDay: Int,
+    val time: String
 )

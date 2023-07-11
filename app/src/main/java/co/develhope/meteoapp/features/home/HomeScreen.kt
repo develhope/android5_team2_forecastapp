@@ -14,7 +14,7 @@ import co.develhope.meteoapp.R
 import co.develhope.meteoapp.features.home.domain.HomeScreenAdapter
 import co.develhope.meteoapp.databinding.ScreenHomeBinding
 import co.develhope.meteoapp.features.SharedPreferencesHelper
-import co.develhope.meteoapp.features.home.domain.WeatherConditions
+import co.develhope.meteoapp.features.data.WeatherConditions
 import co.develhope.meteoapp.features.network.DateUtils.getMonthAndDay
 import co.develhope.meteoapp.features.network.HomeViewModel
 import java.util.*
@@ -51,7 +51,7 @@ class HomeScreen : Fragment() {
         }
     }
 
-    fun showTodaysMeteo(item: WeatherConditions, sharedPreferencesHelper:SharedPreferencesHelper,position: Int = 0) {
+    fun showTodaysMeteo(item: WeatherConditions, sharedPreferencesHelper:SharedPreferencesHelper, position: Int = 0) {
         val maxTemperature = item.daily.maxTemperature[position].toInt()
         val minTemperature = item.daily.minTemperature[position].toInt()
         val date = item.daily.time[position]
