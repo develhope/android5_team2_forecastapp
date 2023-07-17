@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/home_screen"
-        android:name="co.develhope.meteoapp.features.home.HomeScreen"
+        android:name="co.develhope.meteoapp.features.ui.home.HomeScreen"
         android:label="screen_home"
         tools:layout="@layout/screen_home" />
 
     <fragment
         android:id="@+id/today_screen"
-        android:name="co.develhope.meteoapp.features.today.TodayScreen"
+        android:name="co.develhope.meteoapp.features.ui.todaytomorrow.today.TodayScreen"
         android:label="screen_today"
         tools:layout="@layout/screen_today" />
 
     <fragment
         android:id="@+id/tomorrow_screen"
-        android:name="co.develhope.meteoapp.features.tomorrow.TomorrowScreen"
+        android:name="co.develhope.meteoapp.features.ui.todaytomorrow.tomorrow.TomorrowScreen"
         android:label="screen_tomorrow"
         tools:layout="@layout/screen_tomorrow" />
 
     <fragment
         android:id="@+id/search_screen"
-        android:name="co.develhope.meteoapp.features.search.SearchScreen"
+        android:name="co.develhope.meteoapp.features.ui.search.SearchScreen"
         android:label="screen_search"
         tools:layout="@layout/screen_search" />
 
