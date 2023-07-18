@@ -9,9 +9,11 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class SearchCityViewModel : ViewModel() {
+class SearchCityViewModel(
+    private val searchRepository: SearchRepository
 
-    private val searchRepository = SearchRepository()
+) : ViewModel() {
+
 
     private val _searchCitiesLiveData = MutableLiveData<SearchCityResult>()
 

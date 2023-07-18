@@ -14,10 +14,13 @@ import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.ScreenSearchBinding
 import co.develhope.meteoapp.features.data.local.SharedPreferencesHelper
 import co.develhope.meteoapp.features.data.remote.models.SearchCityResult
+import co.develhope.meteoapp.features.ui.todaytomorrow.today.TodayViewModel
+import org.koin.android.ext.android.inject
 
 class SearchScreen : Fragment() {
     private lateinit var binding: ScreenSearchBinding
-    private val viewModel: SearchCityViewModel by viewModels()
+
+    private val viewModel: SearchCityViewModel by inject()
 
     override fun onCreateView(
         inflater: LayoutInflater,
