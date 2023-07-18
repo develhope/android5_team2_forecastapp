@@ -17,6 +17,7 @@ import co.develhope.meteoapp.features.data.remote.ForecastInfo
 import co.develhope.meteoapp.features.data.remote.models.WeatherConditions
 import co.develhope.meteoapp.features.data.local.DateUtils
 import co.develhope.meteoapp.features.ui.todaytomorrow.TodayTomorrowAdapter
+import org.koin.android.ext.android.inject
 import java.time.LocalDate
 import java.time.LocalTime
 
@@ -25,7 +26,7 @@ class TodayScreen : Fragment() {
 
     private lateinit var binding: ScreenTodayBinding
 
-    private val viewModel: TodayViewModel by viewModels()
+    private val viewModel: TodayViewModel by inject()
 
     @RequiresApi(Build.VERSION_CODES.O)
     private val currentDate = DateUtils.getDateForTodayAndTomorrowScreen("${LocalDate.now()}")
@@ -74,17 +75,9 @@ class TodayScreen : Fragment() {
         }
     }
 
-    private fun getCityName(sharedPreferencesHelper: SharedPreferencesHelper){
-        val nullCity = getString(R.string.null_city)
-        val cityName = when(sharedPreferencesHelper.getCityName()){
-            null -> nullCity
-            else -> sharedPreferencesHelper.getCityName()
-        }
-        val regionName = when(sharedPreferencesHelper.getCountry()){
-            null -> " "
-            else -> sharedPreferencesHelper.getCountry()
-        }
-
+    private fun getCityName(sharedPreferencesHelper: SharedPreferencesHelper) {
+        val cityName = sharedPreferencesHelper.getCityName()
+        val regionName= sharedPreferencesHelper.getCountry()
         binding.todayTitleCity.setText("$cityName, $regionName")
     }
 }

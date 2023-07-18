@@ -8,12 +8,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import co.develhope.meteoapp.features.data.local.SharedPreferencesHelper
 import co.develhope.meteoapp.features.data.remote.models.WeatherConditions
-import co.develhope.meteoapp.features.data.remote.repositories.TodayTomorrowRepository
+import co.develhope.meteoapp.features.data.remote.repositories.WeatherRepository
 import kotlinx.coroutines.launch
 
-class TodayViewModel : ViewModel() {
-
-    private val todayTomorrowRepository = TodayTomorrowRepository()
+class TodayViewModel(private val todayTomorrowRepository: WeatherRepository) : ViewModel() {
 
     private val _forecastLiveData = MutableLiveData<WeatherConditions>()
 

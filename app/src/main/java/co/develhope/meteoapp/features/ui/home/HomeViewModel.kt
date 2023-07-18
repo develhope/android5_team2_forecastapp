@@ -7,13 +7,12 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import co.develhope.meteoapp.features.data.remote.models.WeatherConditions
-import co.develhope.meteoapp.features.data.remote.repositories.HomeRepository
+import co.develhope.meteoapp.features.data.remote.repositories.WeatherRepository
 import kotlinx.coroutines.launch
 
-class HomeViewModel : ViewModel() {
-
-    @RequiresApi(Build.VERSION_CODES.O)
-    private val homeRepository = HomeRepository()
+class HomeViewModel(
+    private val homeRepository : WeatherRepository
+) : ViewModel() {
 
     private val _weeklyWeatherLiveData = MutableLiveData<WeatherConditions>()
 

@@ -4,23 +4,23 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import co.develhope.meteoapp.features.data.local.DateUtils
 import co.develhope.meteoapp.features.data.local.SharedPreferencesHelper
-import co.develhope.meteoapp.features.data.remote.apis.HourlyWeatherAPI
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+import co.develhope.meteoapp.features.data.remote.apis.WeatherApi
 import java.time.LocalDate
 
-class TodayTomorrowRepository {
+@RequiresApi(Build.VERSION_CODES.O)
+class WeatherRepository(
+    private val weatherApi: WeatherApi
+) {
 
-    private val hourlyWeatherAPI: HourlyWeatherAPI
 
-    init {
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://api.open-meteo.com/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-        hourlyWeatherAPI = retrofit.create(HourlyWeatherAPI::class.java)
-    }
+    suspend fun getHomeWeather(defLatitude: Double? = 0.0, defLongitude: Double? = 0.0)
+        = weatherApi.getWeeklyMeteo(
+            defLatitude,
+            defLongitude,
+            "weathercode,temperature_2m_max,temperature_2m_min,rain_sum,windspeed_10m_max",
+            true,
+            "Europe/Berlin"
+        )
 
     @RequiresApi(Build.VERSION_CODES.O)
     private val today = DateUtils.getYearMonthAndDay("${LocalDate.now()}")
@@ -30,7 +30,7 @@ class TodayTomorrowRepository {
 
     @RequiresApi(Build.VERSION_CODES.O)
     suspend fun getHourlyWeatherCondition(sharedPreferencesHelper: SharedPreferencesHelper) =
-        hourlyWeatherAPI.getForecast(
+        weatherApi.getForecast(
             sharedPreferencesHelper.getLatitude(),
             sharedPreferencesHelper.getLongitude(),
             true ,
@@ -41,7 +41,7 @@ class TodayTomorrowRepository {
 
     @RequiresApi(Build.VERSION_CODES.O)
     suspend fun getTomorrowWeatherCondition(sharedPreferencesHelper: SharedPreferencesHelper) =
-        hourlyWeatherAPI.getForecast(
+        weatherApi.getForecast(
             sharedPreferencesHelper.getLatitude(),
             sharedPreferencesHelper.getLongitude(),
             true ,

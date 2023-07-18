@@ -15,13 +15,15 @@ import co.develhope.meteoapp.features.data.local.SharedPreferencesHelper
 import co.develhope.meteoapp.features.data.remote.models.WeatherConditions
 import co.develhope.meteoapp.features.data.local.DateUtils
 import co.develhope.meteoapp.features.ui.todaytomorrow.TodayTomorrowAdapter
+import co.develhope.meteoapp.features.ui.todaytomorrow.today.TodayViewModel
+import org.koin.android.ext.android.inject
 import java.time.LocalDate
 
 class TomorrowScreen : Fragment() {
 
     private lateinit var binding: ScreenTomorrowBinding
 
-    private val viewModel: TomorrowViewModel by viewModels()
+    private val viewModel: TomorrowViewModel by inject()
 
     @RequiresApi(Build.VERSION_CODES.O)
     private val tomorrowDate = DateUtils.getDateForTodayAndTomorrowScreen("${LocalDate.now().plusDays(1)}")

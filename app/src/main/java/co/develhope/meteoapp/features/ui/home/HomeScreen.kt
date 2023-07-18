@@ -15,11 +15,14 @@ import co.develhope.meteoapp.databinding.ScreenHomeBinding
 import co.develhope.meteoapp.features.data.local.SharedPreferencesHelper
 import co.develhope.meteoapp.features.data.remote.models.WeatherConditions
 import co.develhope.meteoapp.features.data.local.DateUtils.getMonthAndDay
+import co.develhope.meteoapp.features.ui.todaytomorrow.today.TodayViewModel
+import org.koin.android.ext.android.inject
 import java.util.*
 
 class HomeScreen : Fragment() {
     private lateinit var binding: ScreenHomeBinding
-    private val viewModel: HomeViewModel by viewModels()
+
+    private val viewModel: HomeViewModel by inject()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
