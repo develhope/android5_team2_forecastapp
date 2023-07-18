@@ -16,7 +16,7 @@
         android:layout_marginBottom="@dimen/dimens22dp"
         android:layout_marginStart="@dimen/dimens16dp"
         android:textSize="@dimen/dimens18sp"
-        android:text="@string/example_search_screen_city"
+        android:text=""
         android:textColor="@color/white"/>
 
 <!--    weather conditions precip-->
@@ -40,7 +40,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="@dimen/dimens16dp"
         android:layout_alignEnd="@id/search_item_weather_conditions"
-        android:text="@string/example_temperature_search"
+        android:text=""
         android:textColor="@color/white"/>
 
 </RelativeLayout>

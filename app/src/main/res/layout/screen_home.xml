@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimens24dp"
         android:layout_marginStart="@dimen/dimens24dp"
-        android:text="@string/sample_city_region"
+        android:text=""
         android:textAppearance="@style/city_name"
         android:gravity="top"
         android:layout_marginBottom="@dimen/dimens22dp"/>
