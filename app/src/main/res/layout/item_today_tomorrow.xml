@@ -12,7 +12,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/info"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimens48dp"
+            android:layout_height="@dimen/dimens50dp"
             android:padding="@dimen/dimens3dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
@@ -111,8 +111,8 @@
             android:layout_marginVertical="@dimen/dimens24dp"
             android:layout_marginHorizontal="@dimen/dimens24dp"
             app:cardBackgroundColor="@color/iceCardView"
-            android:elevation="@dimen/dimens24dp"
-            app:cardElevation="@dimen/dimens24dp"
+            app:cardElevation="@dimen/dimens5dp"
+            app:cardMaxElevation="@dimen/dimens5dp"
             app:cardCornerRadius="@dimen/dimens10dp"
             android:visibility="gone"
             android:background="@color/black">

@@ -12,7 +12,7 @@
             android:text=""
             android:textSize="@dimen/dimens16sp"
             android:textColor="@color/blue_text"
-            android:layout_marginTop="@dimen/dimens61dp"
+            android:layout_marginTop="@dimen/dimens36dp"
             android:layout_marginStart="@dimen/dimens24dp"
             android:layout_marginEnd="@dimen/dimens24dp"
             android:fontFamily="@font/inter" />
