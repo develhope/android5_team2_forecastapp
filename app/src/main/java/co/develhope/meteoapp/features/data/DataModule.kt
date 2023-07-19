@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Build
 import androidx.annotation.RequiresApi
 import co.develhope.meteoapp.features.data.local.OffsetDateTimeTypeAdapter
+import co.develhope.meteoapp.features.data.local.SharedPreferencesHelper
 import co.develhope.meteoapp.features.data.remote.apis.SearchCityApi
 import co.develhope.meteoapp.features.data.remote.apis.WeatherApi
 import co.develhope.meteoapp.features.data.remote.repositories.WeatherRepository
@@ -17,7 +18,7 @@ import java.time.OffsetDateTime
 
 @RequiresApi(Build.VERSION_CODES.O)
 val appModule = module {
-    single { androidContext().getSharedPreferences("app", Context.MODE_PRIVATE)}
+    single { SharedPreferencesHelper(androidContext().getSharedPreferences("app", Context.MODE_PRIVATE)) }
     single { WeatherRepository(get())}
     single { SearchRepository(get()) }
     single {   val retrofit = Retrofit.Builder()

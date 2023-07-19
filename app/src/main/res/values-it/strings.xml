@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">meteoapp</string>
-    <!-- home page example data values -->
-    <string name="sample_min_temperature">22°</string>
-    <string name="sample_date">10/09</string>
-    <string name="sample_mm">0mm</string>
-    <string name="sample_weather_icon">weather icon</string>
-    <string name="sample_kmh_placeholder">12kmh</string>
-    <string name="sample_max_temperature">31°</string>
-    <string name="sample_city_region">Catania, Sicilia</string>
     <!-- home page ui fixed values -->
     <string name="next_5_days">Prossimi 5 giorni</string>
     <string name="min">min</string>
@@ -28,35 +20,19 @@
     <string name="tomorrow_icon">Domani</string>
     <string name="search_icon">Search</string>
     <string name="home_fragment">HOME!</string>
-    <string name="city">Palermo,Sicilia</string>
     <string name="today">Oggi</string>
-    <string name="today_date">Domenica 10 Settembre</string>
-    <string name="hour_now">11:00</string>
-    <string name="grade_now">31°</string>
-    <string name="humidity_now">0%</string>
     <string name="perceived">Percepita</string>
     <string name="UV">Indice UV</string>
     <string name="humidity">Umidità</string>
     <string name="wind">Vento</string>
     <string name="cover">Copertura</string>
     <string name="rain">Pioggia</string>
-    <string name="grade_perceived">45°</string>
-    <string name="card_UV">5/10</string>
-    <string name="humidity_percentage">60%</string>
-    <string name="wind_speed">7Km/h</string>
-    <string name="cover_percentage">24%</string>
-    <string name="rain_cm">0cm</string>
-    <string name="hour_for_every_hours">12:00</string>
-    <string name="grade_for_every_hours">29</string>
-    <string name="humidity_for_every_hours">0</string>
     <string name="sun">sole</string>
     <string name="drop">goccia</string>
     <string name="error_message"> C’è stato un problema con il caricamento dei tuoi dati. Verifica la tua rete e riprova.</string>
     <string name="retry">Riprova</string>
     <string name="recent_researches">Recent researches</string>
     <string name="search_a_city">Search a city</string>
-    <string name="example_temperature_search">12°</string>
-    <string name="example_search_screen_city">Palermo</string>
     <string name="screen_search_rainfall_text">precip</string>
     <string name="error_search_too_short">Inserire almeno 4 lettere</string>
     <string name="error_search_invalid_city">Nessuna città trovata con questo nome</string>
@@ -102,7 +78,5 @@
     <string name="thunderstorm_with_slight_hail">temporale con leggera grandine</string>
     <string name="thunderstorm_with_heavy_hail">temporale con forte grandine</string>
     <string name="error">error</string>
-
-    <string name="null_city">Vai sulla ricerca per cercare una città</string>
 
 </resources>
