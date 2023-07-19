@@ -7,14 +7,14 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_gravity="center_horizontal">
+    android:gravity="center">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/info"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimens48dp"
+            android:layout_height="@dimen/dimens50dp"
+            android:padding="@dimen/dimens3dp"
             android:gravity="center_vertical"
-            android:layout_marginEnd="@dimen/dimens10dp"
             android:orientation="horizontal">
 
                 <TextView
@@ -22,8 +22,10 @@
                     android:layout_width="@dimen/dimens50dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inter"
-                    android:text=""
-                    android:layout_marginEnd="@dimen/dimens20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="" 
                     android:textColor="@color/blue_text"
                     android:textSize="@dimen/dimens16sp" />
 
@@ -32,7 +34,10 @@
                     android:layout_width="@dimen/dimens40dp"
                     android:layout_height="@dimen/dimens40dp"
                     android:contentDescription="@string/sun"
-                    android:layout_marginEnd="@dimen/dimens20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/hour_item"
+                    app:layout_constraintEnd_toStartOf="@id/grade_item"
                     android:src="@drawable/sun" />
 
                 <TextView
@@ -43,15 +48,30 @@
                     android:text=""
                     android:textColor="@color/black"
                     android:textSize="@dimen/dimens20sp"
-                    android:layout_marginEnd="@dimen/dimens20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/weather_image_item"
+                    app:layout_constraintEnd_toStartOf="@id/group_humidity"
                     android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/group_humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@id/grade_item"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/arrow_cardView">
 
                 <ImageView
                     android:id="@+id/drop"
                     android:layout_width="@dimen/dimens27dp"
                     android:layout_height="match_parent"
                     android:contentDescription="@string/drop"
-                    android:src="@drawable/fluent_drop_16_filled" />
+                    android:src="@drawable/fluent_drop_16_filled"/>
+
 
                 <TextView
                     android:id="@+id/humidity_percentage_item"
@@ -60,8 +80,9 @@
                     android:fontFamily="@font/inter"
                     android:text=""
                     android:textColor="@color/black"
-                    android:layout_marginEnd="@dimen/dimens30dp"
                     android:textSize="@dimen/dimens20sp" />
+
+                </LinearLayout>
 
                 <ImageView
                     android:id="@+id/arrow_cardView"
@@ -69,15 +90,17 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:rotation="180"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     android:src="@drawable/arrow" />
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ImageView
             android:id="@+id/vector"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimens10dp"
             android:scaleType="fitXY"
             android:src="@drawable/vector_1" />
 
@@ -88,8 +111,8 @@
             android:layout_marginVertical="@dimen/dimens24dp"
             android:layout_marginHorizontal="@dimen/dimens24dp"
             app:cardBackgroundColor="@color/iceCardView"
-            android:elevation="@dimen/dimens24dp"
-            app:cardElevation="@dimen/dimens24dp"
+            app:cardElevation="@dimen/dimens5dp"
+            app:cardMaxElevation="@dimen/dimens5dp"
             app:cardCornerRadius="@dimen/dimens10dp"
             android:visibility="gone"
             android:background="@color/black">
