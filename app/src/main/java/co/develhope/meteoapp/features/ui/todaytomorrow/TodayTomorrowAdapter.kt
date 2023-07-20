@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.ItemTodayTomorrowBinding
+import co.develhope.meteoapp.features.data.remote.ForecastInfo
 import co.develhope.meteoapp.features.data.remote.models.WeatherConditions
 
 class TodayTomorrowAdapter(private val item: WeatherConditions) :
@@ -44,6 +45,7 @@ class TodayTomorrowAdapter(private val item: WeatherConditions) :
             binding.cardWindVal.text = wind.toString().plus(item.hourlyHunits.windSpeedUnit)
             binding.cardCoverageVal.text = coverage.toString().plus(item.hourlyHunits.cloudcover)
             binding.cardRainVal.text = rainInMm.toString().plus(item.hourlyHunits.rain)
+            binding.cardWindDirectionVal.setText(ForecastInfo.windDirection(item.hourly.windDirection[position]))
             
             when(item.hourly.isDay[position]){
                 0 -> binding.weatherImageItem.setImageResource(R.drawable.moon)
@@ -52,17 +54,6 @@ class TodayTomorrowAdapter(private val item: WeatherConditions) :
                     in 1..3 -> binding.weatherImageItem.setImageResource(R.drawable.wc_sun_cloud)
                     else ->  binding.weatherImageItem.setImageResource(R.drawable.wc_rain_cloud)
                 }
-            }
-
-            when(item.hourly.windDirection[position]){
-                in 0..60 -> binding.cardWindDirectionVal.setText(R.string.NNE)
-                in 61..89 -> binding.cardWindDirectionVal.setText(R.string.ENE)
-                in 90..150 -> binding.cardWindDirectionVal.setText(R.string.ESE)
-                in 151..180 -> binding.cardWindDirectionVal.setText(R.string.SSE)
-                in 181..240 -> binding.cardWindDirectionVal.setText(R.string.SSW)
-                in 241..270 -> binding.cardWindDirectionVal.setText(R.string.WSW)
-                in 271..330 -> binding.cardWindDirectionVal.setText(R.string.WNW)
-                else -> binding.cardWindDirectionVal.setText(R.string.NNW)
             }
         }
 
