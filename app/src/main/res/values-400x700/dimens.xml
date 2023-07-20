@@ -45,4 +45,7 @@
     <dimen name="dimens30dp">23dp</dimen>
     <dimen name="dimens19dp">14.7dp</dimen>
     <dimen name="dimens240dp">175dp</dimen>
+    <dimen name="dimens190dp">139dp</dimen>
+    <dimen name="dimens238dp">173.5dp</dimen>
+    <dimen name="dimens38dp">27.7dp</dimen>
 </resources>
