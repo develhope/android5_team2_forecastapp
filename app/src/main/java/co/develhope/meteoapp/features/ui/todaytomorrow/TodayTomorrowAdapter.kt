@@ -71,9 +71,11 @@ class TodayTomorrowAdapter(private val item: WeatherConditions) :
                 if (binding.cardView.visibility == View.GONE) {
                     binding.cardView.visibility = View.VISIBLE
                     binding.arrowCardView.rotation = 360F
+                    binding.vector.visibility = View.GONE
                 } else {
                     binding.cardView.visibility = View.GONE
                     binding.arrowCardView.rotation = 180F
+                    binding.vector.visibility = View.VISIBLE
                 }
             }
         }
