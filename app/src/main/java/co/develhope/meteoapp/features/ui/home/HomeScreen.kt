@@ -3,6 +3,7 @@ package co.develhope.meteoapp.features.ui.home
 import android.content.Context
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -35,17 +36,13 @@ class HomeScreen : Fragment() {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //        dichiara shared preferences Helper per utilizzarlo
         val sharedPreferencesHelper = SharedPreferencesHelper(
             requireContext().getSharedPreferences(
                 "MyPrefs",
                 Context.MODE_PRIVATE
             )
         )
-//        shared preferences per usare e mostrare i dati
-        val latitude = sharedPreferencesHelper.getLatitude()
-        val longitude = sharedPreferencesHelper.getLongitude()
-        viewModel.retrieveMeteo(latitude, longitude)
+        viewModel.retrieveMeteo(sharedPreferencesHelper)
         viewModel.weeklyWeatherLiveData.observe(viewLifecycleOwner) {
             showMeteo(it)
             showTodaysMeteo(it,sharedPreferencesHelper)
