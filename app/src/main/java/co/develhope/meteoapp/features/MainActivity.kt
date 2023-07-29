@@ -12,7 +12,6 @@ import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import co.develhope.meteoapp.R
@@ -27,7 +26,6 @@ import co.develhope.meteoapp.features.data.local.GeoLocalizationHelper
 import co.develhope.meteoapp.features.data.local.SharedPreferencesHelper
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.koin.android.ext.android.inject
 import java.util.*
 
