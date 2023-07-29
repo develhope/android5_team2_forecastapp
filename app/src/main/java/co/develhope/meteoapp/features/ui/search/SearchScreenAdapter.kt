@@ -8,8 +8,10 @@ import co.develhope.meteoapp.databinding.SearchScreenItemBinding
 import co.develhope.meteoapp.features.data.local.SharedPreferencesHelper
 import co.develhope.meteoapp.features.data.remote.models.City
 import co.develhope.meteoapp.features.data.remote.models.SearchCityResult
-
-class SearchScreenAdapter(private val items: SearchCityResult, private val cities: List<City>, private val sharedPreferencesHelper: SharedPreferencesHelper) : RecyclerView.Adapter<SearchScreenAdapter.ViewHolder>() {
+interface OnItemClickListener {
+    fun onItemClick(itemData: City)
+}
+class SearchScreenAdapter( private val items: SearchCityResult, private val cities: List<City>, private val sharedPreferencesHelper: SharedPreferencesHelper,private val itemClickListener: OnItemClickListener? = null) : RecyclerView.Adapter<SearchScreenAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemBinding = SearchScreenItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(itemBinding)
@@ -23,6 +25,7 @@ class SearchScreenAdapter(private val items: SearchCityResult, private val citie
         holder.binding(items, position)
         holder.clicking(items.results[position])
     }
+
 
     inner class ViewHolder (private val binding : SearchScreenItemBinding) : RecyclerView.ViewHolder(binding.root){
 
@@ -41,6 +44,7 @@ class SearchScreenAdapter(private val items: SearchCityResult, private val citie
                 sharedPreferencesHelper.saveLongitude(item.longitude)
                 sharedPreferencesHelper.saveCityName(item.name)
                 sharedPreferencesHelper.saveCountry(item.admin1)
+                itemClickListener?.onItemClick(item)
             }
         }
     }

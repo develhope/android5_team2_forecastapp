@@ -9,25 +9,50 @@
         android:id="@+id/home_screen"
         android:name="co.develhope.meteoapp.features.ui.home.HomeScreen"
         android:label="screen_home"
-        tools:layout="@layout/screen_home" />
+        tools:layout="@layout/screen_home" >
+
+        <action
+            android:id="@+id/action_home_screen_to_search_screen"
+            app:destination="@id/search_screen"
+            app:popUpTo="@+id/home_screen"
+            app:popUpToInclusive="true"/>
+    </fragment>
 
     <fragment
         android:id="@+id/today_screen"
         android:name="co.develhope.meteoapp.features.ui.todaytomorrow.today.TodayScreen"
         android:label="screen_today"
-        tools:layout="@layout/screen_today" />
+        tools:layout="@layout/screen_today" >
+        <action
+            android:id="@+id/action_today_screen_to_search_screen"
+            app:destination="@id/search_screen"
+            app:popUpTo="@+id/today_screen"
+            app:popUpToInclusive="true"/>
+    </fragment>
 
     <fragment
         android:id="@+id/tomorrow_screen"
         android:name="co.develhope.meteoapp.features.ui.todaytomorrow.tomorrow.TomorrowScreen"
         android:label="screen_tomorrow"
-        tools:layout="@layout/screen_tomorrow" />
+        tools:layout="@layout/screen_tomorrow" >
+        <action
+            android:id="@+id/action_tomorrow_screen_to_search_screen"
+            app:destination="@id/search_screen"
+            app:popUpTo="@+id/tomorrow_screen"
+            app:popUpToInclusive="true"/>
+    </fragment>
 
     <fragment
         android:id="@+id/search_screen"
         android:name="co.develhope.meteoapp.features.ui.search.SearchScreen"
         android:label="screen_search"
-        tools:layout="@layout/screen_search" />
+        tools:layout="@layout/screen_search" >
+        <action
+            android:id="@+id/action_search_screen_to_home_screen"
+            app:destination="@id/home_screen"
+            app:popUpTo="@+id/home_screen"
+            app:popUpToInclusive="true"/>
+    </fragment>
 
 
 </navigation>

@@ -13,10 +13,10 @@ class WeatherRepository(
 ) {
 
 
-    suspend fun getHomeWeather(defLatitude: Double? = 0.0, defLongitude: Double? = 0.0)
+    suspend fun getHomeWeather(sharedPreferencesHelper: SharedPreferencesHelper)
         = weatherApi.getWeeklyMeteo(
-            defLatitude,
-            defLongitude,
+        sharedPreferencesHelper.getLatitude(),
+        sharedPreferencesHelper.getLongitude(),
             "weathercode,temperature_2m_max,temperature_2m_min,rain_sum,windspeed_10m_max",
             true,
             "Europe/Berlin"
