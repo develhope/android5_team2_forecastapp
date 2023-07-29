@@ -29,7 +29,7 @@
     <string name="rain">Pioggia</string>
     <string name="sun">sole</string>
     <string name="drop">goccia</string>
-    <string name="error_message"> C’è stato un problema con il caricamento dei tuoi dati. Verifica la tua rete e riprova.</string>
+    <string name="error_message"> C’è stato un problema con il caricamento dei dati. Verifica la tua rete e riprova.</string>
     <string name="retry">Riprova</string>
     <string name="recent_researches">Recent researches</string>
     <string name="search_a_city">Search a city</string>

@@ -13,7 +13,6 @@ class MyApplication:Application() {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate() {
         super.onCreate()
-
         startKoin{
             androidContext(this@MyApplication)
             modules(listOf(appModule, viewModels))

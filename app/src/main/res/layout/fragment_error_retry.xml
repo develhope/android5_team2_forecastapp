@@ -9,7 +9,8 @@
     tools:context=".features.MainActivity">
 
     <LinearLayout
-        android:id="@+id/error_layout"
+        android:id="@+id/error_layout_retry"
+        android:background="@android:color/transparent"
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:clickable="true"
@@ -21,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/error_image"
+            android:id="@+id/error_image_retry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/error_message"
@@ -30,7 +31,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/message_error"
+            android:id="@+id/message_error_retry"
             android:layout_width="match_parent"
             android:layout_height="77dp"
             android:layout_marginTop="@dimen/dimens30dp"
@@ -41,6 +42,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/error_image" />
 
-
+        <Button
+            android:id="@+id/retry_button_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimens20dp"
+            android:text="@string/retry"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/message_error" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
