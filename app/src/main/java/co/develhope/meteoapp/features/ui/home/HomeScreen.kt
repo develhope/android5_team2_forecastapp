@@ -1,21 +1,22 @@
 package co.develhope.meteoapp.features.ui.home
 
-import android.content.Context
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
+
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.ScreenHomeBinding
 import co.develhope.meteoapp.features.data.local.SharedPreferencesHelper
 import co.develhope.meteoapp.features.data.remote.models.WeatherConditions
 import co.develhope.meteoapp.features.data.local.DateUtils.getMonthAndDay
-import co.develhope.meteoapp.features.ui.todaytomorrow.today.TodayViewModel
 import org.koin.android.ext.android.inject
 import java.util.*
 
@@ -23,6 +24,7 @@ class HomeScreen : Fragment() {
     private lateinit var binding: ScreenHomeBinding
 
     private val viewModel: HomeViewModel by inject()
+    private val sharedPreferencesHelper: SharedPreferencesHelper by inject()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,17 +37,12 @@ class HomeScreen : Fragment() {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //        dichiara shared preferences Helper per utilizzarlo
-        val sharedPreferencesHelper = SharedPreferencesHelper(
-            requireContext().getSharedPreferences(
-                "MyPrefs",
-                Context.MODE_PRIVATE
-            )
-        )
-//        shared preferences per usare e mostrare i dati
-        val latitude = sharedPreferencesHelper.getLatitude()
-        val longitude = sharedPreferencesHelper.getLongitude()
-        viewModel.retrieveMeteo(latitude, longitude)
+        Log.d("main","${sharedPreferencesHelper.getLatitude()} on home")
+        if (sharedPreferencesHelper.getCityName().isNullOrEmpty()){
+            findNavController().navigate(R.id.action_home_screen_to_search_screen)
+            Toast.makeText(context,"Search a city!", Toast.LENGTH_SHORT).show()
+        }
+        viewModel.retrieveMeteo(sharedPreferencesHelper)
         viewModel.weeklyWeatherLiveData.observe(viewLifecycleOwner) {
             showMeteo(it)
             showTodaysMeteo(it,sharedPreferencesHelper)

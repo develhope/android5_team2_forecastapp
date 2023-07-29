@@ -78,5 +78,6 @@
     <string name="thunderstorm_with_slight_hail">temporale con leggera grandine</string>
     <string name="thunderstorm_with_heavy_hail">temporale con forte grandine</string>
     <string name="error">error</string>
+    <string name="request_turn_on_position">Per favora attiva la posizione</string>
 
 </resources>

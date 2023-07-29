@@ -78,5 +78,6 @@
     <string name="thunderstorm_with_slight_hail">Thunderstorm with slight hail</string>
     <string name="thunderstorm_with_heavy_hail">Thunderstorm with heavy hail</string>
     <string name="error">error</string>
+    <string name="request_turn_on_position">Please turn on location</string>
 
 </resources>
