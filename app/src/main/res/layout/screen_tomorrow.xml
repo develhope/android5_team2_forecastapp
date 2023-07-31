@@ -53,13 +53,13 @@
         android:textSize="@dimen/dimens16sp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/todayTomorrowRecyclerView"
+        android:id="@+id/tomorrowRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/dimens16dp"
         android:layout_marginStart="@dimen/dimens24dp"
         android:layout_marginEnd="@dimen/dimens24dp"
-        tools:listitem="@layout/item_today_tomorrow"
+        tools:listitem="@layout/item_tomorrow"
         tools:itemCount="4" />
 
 </LinearLayout>

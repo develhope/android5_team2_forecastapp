@@ -1,19 +1,19 @@
-package co.develhope.meteoapp.features.ui.todaytomorrow
+package co.develhope.meteoapp.features.ui.tomorrow
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import co.develhope.meteoapp.R
-import co.develhope.meteoapp.databinding.ItemTodayTomorrowBinding
+import co.develhope.meteoapp.databinding.ItemTomorrowBinding
 import co.develhope.meteoapp.features.data.remote.ForecastInfo
 import co.develhope.meteoapp.features.data.remote.models.WeatherConditions
 
-class TodayTomorrowAdapter(private val item: WeatherConditions) :
-    RecyclerView.Adapter<TodayTomorrowAdapter.ViewHolder>() {
+class TomorrowAdapter(private val item: WeatherConditions) :
+    RecyclerView.Adapter<TomorrowAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(ItemTodayTomorrowBinding.inflate(LayoutInflater.from(parent.context),parent,false))
+        return ViewHolder(ItemTomorrowBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -23,7 +23,7 @@ class TodayTomorrowAdapter(private val item: WeatherConditions) :
 
     override fun getItemCount(): Int = 24
 
-    inner class ViewHolder(private val binding : ItemTodayTomorrowBinding) :
+    inner class ViewHolder(private val binding : ItemTomorrowBinding) :
         RecyclerView.ViewHolder(binding.root){
 
         fun bindItem(item: WeatherConditions, position: Int){

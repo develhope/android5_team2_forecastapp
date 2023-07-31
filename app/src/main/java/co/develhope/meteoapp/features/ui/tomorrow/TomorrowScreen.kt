@@ -1,4 +1,4 @@
-package co.develhope.meteoapp.features.ui.todaytomorrow.tomorrow
+package co.develhope.meteoapp.features.ui.tomorrow
 
 import android.os.Build
 import android.os.Bundle
@@ -15,7 +15,6 @@ import co.develhope.meteoapp.databinding.ScreenTomorrowBinding
 import co.develhope.meteoapp.features.data.local.DateUtils
 import co.develhope.meteoapp.features.data.local.SharedPreferencesHelper
 import co.develhope.meteoapp.features.data.remote.models.WeatherConditions
-import co.develhope.meteoapp.features.ui.todaytomorrow.TodayTomorrowAdapter
 import org.koin.android.ext.android.inject
 import java.time.LocalDate
 
@@ -58,9 +57,9 @@ class TomorrowScreen : Fragment() {
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun showTomorrowMeteo(meteo: WeatherConditions){
-        binding.todayTomorrowRecyclerView.apply {
-            binding.todayTomorrowRecyclerView.layoutManager = LinearLayoutManager(context)
-            binding.todayTomorrowRecyclerView.adapter = TodayTomorrowAdapter(meteo)
+        binding.tomorrowRecyclerView.apply {
+            binding.tomorrowRecyclerView.layoutManager = LinearLayoutManager(context)
+            binding.tomorrowRecyclerView.adapter = TomorrowAdapter(meteo)
             binding.tomorrowTitleDate.text = tomorrowDate
         }
     }

@@ -1,4 +1,4 @@
-package co.develhope.meteoapp.features
+package co.develhope.meteoapp.features.ui
 
 import android.view.Gravity
 import android.view.LayoutInflater

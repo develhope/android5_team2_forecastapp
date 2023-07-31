@@ -1,4 +1,4 @@
-package co.develhope.meteoapp.features.ui.todaytomorrow.today
+package co.develhope.meteoapp.features.ui.today
 
 import android.os.Build
 import android.os.Bundle
@@ -16,7 +16,6 @@ import co.develhope.meteoapp.features.data.local.DateUtils
 import co.develhope.meteoapp.features.data.local.SharedPreferencesHelper
 import co.develhope.meteoapp.features.data.remote.ForecastInfo
 import co.develhope.meteoapp.features.data.remote.models.WeatherConditions
-import co.develhope.meteoapp.features.ui.todaytomorrow.TodayTomorrowAdapter
 import org.koin.android.ext.android.inject
 import java.time.LocalDate
 import java.time.LocalTime
@@ -58,6 +57,7 @@ class TodayScreen : Fragment() {
 
         viewModel.forecastLiveData.observe(viewLifecycleOwner){
             showTodayMeteo(it)
+            scrollToCurrentHour(it)
         }
 
         getCityName(sharedPreferencesHelper)
@@ -65,10 +65,14 @@ class TodayScreen : Fragment() {
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun showTodayMeteo(meteo: WeatherConditions){
-        binding.todayTomorrowRecyclerView.apply {
-            binding.todayTomorrowRecyclerView.layoutManager = LinearLayoutManager(context)
-            binding.todayTomorrowRecyclerView.adapter = TodayTomorrowAdapter(meteo)
-            binding.todayTomorrowRecyclerView.scrollToPosition(currentHour)
+        binding.todayRecyclerView.layoutManager = LinearLayoutManager(context)
+        binding.todayRecyclerView.adapter = TodayAdapter(meteo)
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun scrollToCurrentHour(meteo: WeatherConditions){
+        binding.todayRecyclerView.apply {
+            binding.todayRecyclerView.scrollToPosition(currentHour)
             binding.todayTitleDate.text = currentDate
             binding.weatherConditionForNow.text = getText(ForecastInfo.weatherConditionCode(meteo.hourly.weathercode[currentHour]))
         }
