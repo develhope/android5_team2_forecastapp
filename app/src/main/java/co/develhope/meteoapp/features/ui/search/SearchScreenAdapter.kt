@@ -44,6 +44,7 @@ class SearchScreenAdapter( private val items: SearchCityResult, private val citi
                 sharedPreferencesHelper.saveLongitude(item.longitude)
                 sharedPreferencesHelper.saveCityName(item.name)
                 sharedPreferencesHelper.saveCountry(item.admin1)
+                sharedPreferencesHelper.saveClickedCity(item)
                 itemClickListener?.onItemClick(item)
             }
         }

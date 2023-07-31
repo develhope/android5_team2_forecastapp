@@ -31,8 +31,8 @@
     <string name="drop">goccia</string>
     <string name="error_message"> C’è stato un problema con il caricamento dei dati. Verifica la tua rete e riprova.</string>
     <string name="retry">Riprova</string>
-    <string name="recent_researches">Recent researches</string>
-    <string name="search_a_city">Search a city</string>
+    <string name="recent_researches">Ricerche recenti</string>
+    <string name="search_a_city">Cerca una città</string>
     <string name="screen_search_rainfall_text">precip</string>
     <string name="error_search_too_short">Inserire almeno 4 lettere</string>
     <string name="error_search_invalid_city">Nessuna città trovata con questo nome</string>
