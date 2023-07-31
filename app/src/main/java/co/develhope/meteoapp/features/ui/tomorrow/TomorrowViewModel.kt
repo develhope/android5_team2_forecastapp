@@ -1,4 +1,4 @@
-package co.develhope.meteoapp.features.ui.todaytomorrow.tomorrow
+package co.develhope.meteoapp.features.ui.tomorrow
 
 import android.os.Build
 import androidx.annotation.RequiresApi
