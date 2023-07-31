@@ -1,4 +1,4 @@
-package co.develhope.meteoapp.features.ui
+package co.develhope.meteoapp.features.ui.main
 
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -42,6 +42,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+        GeoLocalizationHelper.getCurrentLocation(this, sharedPreferencesHelper)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -79,6 +81,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }.launchIn(lifecycleScope)
+
     }
 
     private fun showToast(message: String) {
@@ -114,7 +117,6 @@ class MainActivity : AppCompatActivity() {
         if (::popupWindow.isInitialized && popupWindow.isShowing) {
             popupWindow.dismiss()
         }
-        GeoLocalizationHelper.getCurrentLocation(this, sharedPreferencesHelper)
     }
 
 }

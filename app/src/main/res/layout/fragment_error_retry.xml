@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_light_grey"
-    tools:context=".features.MainActivity">
+    tools:context=".features.ui.main.MainActivity">
 
     <LinearLayout
         android:id="@+id/error_layout_retry"

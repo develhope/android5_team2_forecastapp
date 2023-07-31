@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/today_screen"
-        android:name="co.develhope.meteoapp.features.ui.todaytomorrow.today.TodayScreen"
+        android:name="co.develhope.meteoapp.features.ui.today.TodayScreen"
         android:label="screen_today"
         tools:layout="@layout/screen_today" >
         <action
@@ -32,7 +32,7 @@
 
     <fragment
         android:id="@+id/tomorrow_screen"
-        android:name="co.develhope.meteoapp.features.ui.todaytomorrow.tomorrow.TomorrowScreen"
+        android:name="co.develhope.meteoapp.features.ui.tomorrow.TomorrowScreen"
         android:label="screen_tomorrow"
         tools:layout="@layout/screen_tomorrow" >
         <action
