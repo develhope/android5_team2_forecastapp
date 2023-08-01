@@ -33,9 +33,8 @@ class SharedPreferencesHelper(private val preferences: SharedPreferences) {
 
     private fun saveRecentlySearchedCities() {
         val recentlySearched = getRecentlySearchedCities()
-        recentlySearched.add(getClickedCity())
-        if (recentlySearched.contains(getClickedCity())) {
-            recentlySearched.remove(getClickedCity())
+        if (!recentlySearched.contains(getClickedCity())) {
+            recentlySearched.add(getClickedCity())
         }
         if (recentlySearched.size > 5) {
             recentlySearched.removeAt(0)
