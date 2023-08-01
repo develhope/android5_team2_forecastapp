@@ -12,8 +12,7 @@ class WeatherRepository(
     private val weatherApi: WeatherApi
 ) {
 
-
-    suspend fun getHomeWeather(sharedPreferencesHelper: SharedPreferencesHelper)
+    suspend fun getDailyWeather(sharedPreferencesHelper: SharedPreferencesHelper)
         = weatherApi.getWeeklyMeteo(
         sharedPreferencesHelper.getLatitude(),
         sharedPreferencesHelper.getLongitude(),
@@ -29,7 +28,7 @@ class WeatherRepository(
     private val tomorrow = DateUtils.getYearMonthAndDay("${LocalDate.now().plusDays(1)}")
 
     @RequiresApi(Build.VERSION_CODES.O)
-    suspend fun getHourlyWeatherCondition(sharedPreferencesHelper: SharedPreferencesHelper) =
+    suspend fun getTodayHourlyWeather(sharedPreferencesHelper: SharedPreferencesHelper) =
         weatherApi.getForecast(
             sharedPreferencesHelper.getLatitude(),
             sharedPreferencesHelper.getLongitude(),
@@ -40,7 +39,7 @@ class WeatherRepository(
         )
 
     @RequiresApi(Build.VERSION_CODES.O)
-    suspend fun getTomorrowWeatherCondition(sharedPreferencesHelper: SharedPreferencesHelper) =
+    suspend fun getTomorrowHourlyWeather(sharedPreferencesHelper: SharedPreferencesHelper) =
         weatherApi.getForecast(
             sharedPreferencesHelper.getLatitude(),
             sharedPreferencesHelper.getLongitude(),

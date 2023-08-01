@@ -15,16 +15,16 @@ class TomorrowViewModel(
     private val todayTomorrowRepository: WeatherRepository
 ) : ViewModel() {
 
-    private val _forecastLiveData = MutableLiveData<WeatherConditions>()
+    private val _weatherLiveData = MutableLiveData<WeatherConditions>()
 
-    val forecastLiveData: LiveData<WeatherConditions> = _forecastLiveData
+    val weatherLiveData: LiveData<WeatherConditions> = _weatherLiveData
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun downloadForecastInfo(sharedPreferencesHelper: SharedPreferencesHelper) {
+    fun downloadWeatherInfo(sharedPreferencesHelper: SharedPreferencesHelper) {
         viewModelScope.launch {
             try {
-                val forecastInfoTomorrow = todayTomorrowRepository.getTomorrowWeatherCondition(sharedPreferencesHelper)
-                _forecastLiveData.postValue(forecastInfoTomorrow)
+                val weatherInfoTomorrow = todayTomorrowRepository.getTomorrowHourlyWeather(sharedPreferencesHelper)
+                _weatherLiveData.postValue(weatherInfoTomorrow)
             } catch (e: Exception) {
 //               TODO ADD ERROR MANAGEMENT
             }
