@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -24,6 +25,8 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import co.develhope.meteoapp.features.data.local.GeoLocalizationHelper
 import co.develhope.meteoapp.features.data.local.SharedPreferencesHelper
+import com.google.android.gms.common.ConnectionResult
+import com.google.android.gms.common.GoogleApiAvailability
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import org.koin.android.ext.android.inject
@@ -42,8 +45,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-        GeoLocalizationHelper.getCurrentLocation(this, sharedPreferencesHelper)
-
+//        GeoLocalizationHelper.getCurrentLocation(this, sharedPreferencesHelper)
+        getGeoLocalization()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -84,6 +87,27 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun isGooglePlayServicesAvailable(): Boolean {
+        Log.e("Main", "we are checking playservice availibalet: ")
+        val apiAvailability = GoogleApiAvailability.getInstance()
+        val resultCode = apiAvailability.isGooglePlayServicesAvailable(this)
+        return resultCode == ConnectionResult.SUCCESS
+    }
+
+    fun getGeoLocalization() {
+        if (isGooglePlayServicesAvailable()) {
+            try {
+                GeoLocalizationHelper.getCurrentLocation(this, sharedPreferencesHelper)
+                Log.e("Main", "Succesfully getting location: ")
+            } catch (e: Exception) {
+                Log.e("Main", "Error getting location: ${e.message}")
+            }
+        } else {
+            // Google Play Services are not available
+            Log.e("Main", "Google Play Services are not available on this device.")
+        }
+    }
+
     private fun showToast(message: String) {
         Toast.makeText(applicationContext, message, Toast.LENGTH_LONG).show()
     }
@@ -120,6 +144,3 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
-
-
-
