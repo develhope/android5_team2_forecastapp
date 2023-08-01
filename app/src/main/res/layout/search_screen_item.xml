@@ -15,9 +15,8 @@
         android:layout_marginTop="@dimen/dimens22dp"
         android:layout_marginBottom="@dimen/dimens22dp"
         android:layout_marginStart="@dimen/dimens16dp"
-        android:textSize="@dimen/dimens18sp"
         android:text=""
-        android:textColor="@color/white"/>
+        style="@style/search_value" />
 
 <!--    weather conditions precip-->
     <TextView
@@ -29,8 +28,7 @@
         android:layout_marginEnd="@dimen/dimens16dp"
         android:layout_marginBottom="@dimen/dimens16dp"
         android:text="@string/screen_search_rainfall_text"
-        android:textColor="@color/white"
-        android:textSize="@dimen/dimens10sp"/>
+        style="@style/search_city_style" />
 
 <!--    degrees 12-->
     <TextView
@@ -41,6 +39,6 @@
         android:layout_marginTop="@dimen/dimens16dp"
         android:layout_alignEnd="@id/search_item_weather_conditions"
         android:text=""
-        android:textColor="@color/white"/>
+        style="@style/search_country" />
 
 </RelativeLayout>

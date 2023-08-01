@@ -20,28 +20,39 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
     </style>
-    <style name="oggi">
+    <style name="home_title_20_sp">
         <item name="android:textSize">@dimen/dimens20sp</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/white_text</item>
+        <item name="android:fontFamily">@font/inter</item>
     </style>
-    <style name="some_id">
+
+    <style name="home_20_sp">
         <item name="android:textSize">@dimen/dimens20sp</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/white_text</item>
+        <item name="android:fontFamily">@font/inter</item>
     </style>
-    <style name="home_font">
+
+    <style name="home_15_sp">
         <item name="android:textSize">@dimen/dimens15sp</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/white_text</item>
+        <item name="android:fontFamily">@font/inter</item>
     </style>
-    <style name="prossimi_5_">
+
+    <style name="home_16_sp">
         <item name="android:textSize">@dimen/dimens16sp</item>
         <item name="android:letterSpacing">0.07</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/white_text</item>
+        <item name="android:fontFamily">@font/inter</item>
     </style>
-    <style name="city_name">
+
+    <style name="home_32_sp">
         <item name="android:textSize">@dimen/dimens32sp</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/white_text</item>
+        <item name="android:fontFamily">@font/inter</item>
     </style>
+
     <style name="dialogAnimation">
         <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
