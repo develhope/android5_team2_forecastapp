@@ -65,7 +65,7 @@ class TomorrowScreen : Fragment() {
     }
 
     private fun getCityName(sharedPreferencesHelper: SharedPreferencesHelper){
-        binding.todayTitleCity.text = "${sharedPreferencesHelper.getCityName()}, ${sharedPreferencesHelper.getCountry()}"
+        binding.tomorrowTitleCity.text = "${sharedPreferencesHelper.getCityName()}, ${sharedPreferencesHelper.getCountry()}"
     }
 }
 

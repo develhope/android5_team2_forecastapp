@@ -14,10 +14,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimens24dp"
         android:layout_marginStart="@dimen/dimens24dp"
+        android:layout_marginBottom="@dimen/dimens22dp"
         android:text=""
-        android:textAppearance="@style/city_name"
         android:gravity="top"
-        android:layout_marginBottom="@dimen/dimens22dp"/>
+        android:textAppearance="@style/home_32_sp"/>
 
     <include
         android:id="@+id/home_today"
@@ -35,7 +35,7 @@
         android:layout_marginStart="@dimen/dimens10dp"
         android:layout_marginBottom="@dimen/dimens10dp"
         android:text="@string/next_5_days"
-        android:textAppearance="@style/prossimi_5_"/>
+        android:textAppearance="@style/home_16_sp"/>
 
     <!--    Recycler homescreen item-->
     <androidx.recyclerview.widget.RecyclerView

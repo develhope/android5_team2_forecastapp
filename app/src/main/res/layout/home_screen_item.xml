@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/today"
-        android:textAppearance="@style/oggi"
+        android:textAppearance="@style/home_title_20_sp"
         android:gravity="top"
         android:layout_marginStart="@dimen/dimens18dp"
         android:layout_marginTop="@dimen/dimens18dp"/>
@@ -29,7 +29,7 @@
         android:layout_marginTop="@dimen/dimens50dp"
         android:layout_marginStart="@dimen/dimens18dp"
         android:text=""
-        android:textAppearance="@style/some_id"
+        android:textAppearance="@style/home_20_sp"
         android:gravity="top"/>
 
     <!-- 22 -->
@@ -40,7 +40,7 @@
         android:layout_marginStart="@dimen/dimens145dp"
         android:layout_marginTop="@dimen/dimens18dp"
         android:text=""
-        android:textAppearance="@style/some_id"
+        android:textAppearance="@style/home_20_sp"
         android:gravity="top"/>
 
     <!-- min -->
@@ -51,7 +51,7 @@
         android:layout_marginStart="@dimen/dimens145dp"
         android:layout_marginTop="@dimen/dimens46dp"
         android:text="@string/min"
-        android:textAppearance="@style/home_font"
+        android:textAppearance="@style/home_15_sp"
         android:gravity="top"/>
 
     <!-- 31(°) -->
@@ -62,7 +62,7 @@
         android:layout_marginStart="@dimen/dimens261dp"
         android:layout_marginTop="@dimen/dimens18dp"
         android:text=""
-        android:textAppearance="@style/some_id"
+        android:textAppearance="@style/home_20_sp"
         android:gravity="top"/>
 
     <!-- max -->
@@ -73,7 +73,7 @@
         android:layout_marginStart="@dimen/dimens261dp"
         android:layout_marginTop="@dimen/dimens46dp"
         android:text="@string/max"
-        android:textAppearance="@style/home_font"
+        android:textAppearance="@style/home_15_sp"
         android:gravity="top"/>
 
     <!-- sun -->
@@ -95,7 +95,7 @@
         android:layout_marginTop="@dimen/dimens89dp"
         android:gravity="top"
         android:text=""
-        android:textAppearance="@style/some_id" />
+        android:textAppearance="@style/home_20_sp" />
 
     <!-- precip. -->
     <TextView
@@ -105,7 +105,7 @@
         android:layout_marginTop="@dimen/dimens117dp"
         android:layout_marginStart="@dimen/dimens145dp"
         android:text="@string/rainfall"
-        android:textAppearance="@style/home_font"
+        android:textAppearance="@style/home_15_sp"
         android:gravity="top"/>
 
     <!-- 12(kmh) -->
@@ -118,7 +118,7 @@
         android:layout_marginEnd="@dimen/dimens19dp"
         android:gravity="top"
         android:text=""
-        android:textAppearance="@style/some_id" />
+        android:textAppearance="@style/home_20_sp" />
 
     <!-- vento -->
     <TextView
@@ -128,7 +128,7 @@
         android:layout_marginTop="@dimen/dimens117dp"
         android:layout_marginStart="@dimen/dimens261dp"
         android:text="@string/wind"
-        android:textAppearance="@style/home_font"
+        android:textAppearance="@style/home_15_sp"
         android:gravity="top"/>
 
 </RelativeLayout>

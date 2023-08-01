@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="value_16_sp">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/dimens16sp</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
+    <style name="value_16_sp_bold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/dimens16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
+    <style name="value_20_sp_bold">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/dimens20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="value_20_sp">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:layout_weight">0.5</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/dimens20sp</item>
+    </style>
+
+    <style name="title_day_16_sp">
+        <item name="android:textSize">@dimen/dimens16sp</item>
+        <item name="android:textColor">@color/blue_text</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
+    <style name="title_day_20_sp_bold">
+        <item name="android:textSize">@dimen/dimens20sp</item>
+        <item name="android:textColor">@color/blue_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
+    <style name="title_day_16_sp_bold">
+        <item name="android:textColor">@color/blue_text</item>
+        <item name="android:textSize">@dimen/dimens16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
+    <style name="vector_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="search_value">
+        <item name="android:textSize">@dimen/dimens18sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
+    <style name="search_city_style">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/dimens10sp</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
+    <style name="search_country">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
+</resources>

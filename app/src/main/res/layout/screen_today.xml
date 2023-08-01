@@ -10,48 +10,38 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="@dimen/dimens16sp"
-            android:textColor="@color/blue_text"
             android:layout_marginTop="@dimen/dimens36dp"
             android:layout_marginStart="@dimen/dimens24dp"
             android:layout_marginEnd="@dimen/dimens24dp"
-            android:fontFamily="@font/inter" />
+            style="@style/title_day_16_sp" />
 
         <TextView
             android:id="@+id/today_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/today"
-            android:textSize="@dimen/dimens20sp"
-            android:textColor="@color/blue_text"
             android:layout_marginStart="@dimen/dimens24dp"
             android:layout_marginEnd="@dimen/dimens24dp"
-            android:textStyle="bold"
-            android:fontFamily="@font/inter" />
+            style="@style/title_day_20_sp_bold" />
 
         <TextView
             android:id="@+id/today_titleDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textColor="@color/blue_text"
             android:layout_marginStart="@dimen/dimens24dp"
             android:layout_marginEnd="@dimen/dimens24dp"
-            android:textSize="@dimen/dimens16sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/inter" />
+            style="@style/title_day_16_sp_bold" />
 
         <TextView
             android:id="@+id/weather_condition_for_now"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/inter"
-            android:layout_marginTop="@dimen/dimens20dp"
             android:text=""
-            android:textColor="@color/blue_text"
+            android:layout_marginTop="@dimen/dimens20dp"
             android:layout_marginStart="@dimen/dimens24dp"
             android:layout_marginEnd="@dimen/dimens24dp"
-            android:textSize="@dimen/dimens16sp" />
+            style="@style/title_day_16_sp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/todayRecyclerView"

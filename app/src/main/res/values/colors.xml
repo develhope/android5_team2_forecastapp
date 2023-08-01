@@ -12,4 +12,5 @@
     <color name="blue_text">#230EA4</color>
     <color name="background_light_grey">#E4E4F2</color>
     <color name="iceCardView">#F5F4FE</color>
+    <color name="white_text">#FFFFFF</color>
 </resources>
