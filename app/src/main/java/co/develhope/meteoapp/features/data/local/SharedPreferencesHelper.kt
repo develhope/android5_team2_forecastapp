@@ -16,26 +16,28 @@ class SharedPreferencesHelper(private val preferences: SharedPreferences) {
         const val KEY_RECENTLY_SEARCHED = "recently searched cities"
         const val KEY_CLICKED_CITY = "clicked city"
     }
+
     private val gson = Gson()
 
-    fun saveClickedCity (clickedCity: City){
+    fun saveClickedCity(clickedCity: City) {
         val json = gson.toJson(clickedCity)
-        preferences.edit().putString(KEY_CLICKED_CITY,json).apply()
+        preferences.edit().putString(KEY_CLICKED_CITY, json).apply()
         saveRecentlySearchedCities()
     }
 
-    private fun getClickedCity(): City{
+    private fun getClickedCity(): City {
         val json = preferences.getString(KEY_CLICKED_CITY, null)
         val type = object : TypeToken<City>() {}.type
-        return gson.fromJson(json,type)
+        return gson.fromJson(json, type)
     }
 
-    private fun saveRecentlySearchedCities(){
+    private fun saveRecentlySearchedCities() {
         val recentlySearched = getRecentlySearchedCities()
-        if (!recentlySearched.contains(getClickedCity())){
-            recentlySearched.add(getClickedCity())
+        recentlySearched.add(getClickedCity())
+        if (recentlySearched.contains(getClickedCity())) {
+            recentlySearched.remove(getClickedCity())
         }
-        if(recentlySearched.size > 5){
+        if (recentlySearched.size > 5) {
             recentlySearched.removeAt(0)
         }
         val json = gson.toJson(recentlySearched)
@@ -58,10 +60,10 @@ class SharedPreferencesHelper(private val preferences: SharedPreferences) {
         preferences.edit().putString(KEY_COUNTRY, country).apply()
     }
 
-    fun getRecentlySearchedCities(): MutableList<City>{
-        val json = preferences.getString(KEY_RECENTLY_SEARCHED,null)
+    fun getRecentlySearchedCities(): MutableList<City> {
+        val json = preferences.getString(KEY_RECENTLY_SEARCHED, null)
         val type = object : TypeToken<List<City>>() {}.type
-        return gson.fromJson(json,type) ?: mutableListOf()
+        return gson.fromJson(json, type) ?: mutableListOf()
     }
 
     fun getLatitude(): Double? {
