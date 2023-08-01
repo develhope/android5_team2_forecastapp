@@ -11,7 +11,6 @@ import kotlinx.coroutines.launch
 
 class SearchCityViewModel(
     private val searchRepository: SearchRepository
-
 ) : ViewModel() {
 
 
@@ -19,7 +18,7 @@ class SearchCityViewModel(
 
     val searchCitiesLiveData: LiveData<SearchCityResult> = _searchCitiesLiveData
 
-    fun getCities(p0: String?) {
+    fun getCity(p0: String?) {
         CoroutineScope(Dispatchers.IO).launch {
             val city = searchRepository.getCity(p0)
             _searchCitiesLiveData.postValue(city)

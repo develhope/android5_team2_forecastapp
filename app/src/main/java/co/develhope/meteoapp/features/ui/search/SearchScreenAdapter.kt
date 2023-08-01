@@ -26,7 +26,6 @@ class SearchScreenAdapter( private val items: SearchCityResult, private val citi
         holder.clicking(items.results[position])
     }
 
-
     inner class ViewHolder (private val binding : SearchScreenItemBinding) : RecyclerView.ViewHolder(binding.root){
 
         fun binding(item: SearchCityResult, position: Int){

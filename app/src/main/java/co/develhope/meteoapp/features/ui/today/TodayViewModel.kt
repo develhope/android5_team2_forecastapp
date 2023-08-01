@@ -11,18 +11,20 @@ import co.develhope.meteoapp.features.data.remote.models.WeatherConditions
 import co.develhope.meteoapp.features.data.remote.repositories.WeatherRepository
 import kotlinx.coroutines.launch
 
-class TodayViewModel(private val todayTomorrowRepository: WeatherRepository) : ViewModel() {
+class TodayViewModel(
+    private val todayTomorrowRepository: WeatherRepository
+    ) : ViewModel() {
 
-    private val _forecastLiveData = MutableLiveData<WeatherConditions>()
+    private val _weatherLiveData = MutableLiveData<WeatherConditions>()
 
-    val forecastLiveData: LiveData<WeatherConditions> = _forecastLiveData
+    val weatherLiveData: LiveData<WeatherConditions> = _weatherLiveData
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun downloadForecastInfo(sharedPreferencesHelper: SharedPreferencesHelper){
+    fun downloadWeatherInfo(sharedPreferencesHelper: SharedPreferencesHelper){
         viewModelScope.launch {
             try {
-                val forecastInfo = todayTomorrowRepository.getHourlyWeatherCondition(sharedPreferencesHelper)
-                _forecastLiveData.postValue(forecastInfo)
+                val weatherInfo = todayTomorrowRepository.getTodayHourlyWeather(sharedPreferencesHelper)
+                _weatherLiveData.postValue(weatherInfo)
             } catch (e: Exception){
 //               TODO ADD ERROR MANAGEMENT
             }

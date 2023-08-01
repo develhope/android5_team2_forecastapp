@@ -20,8 +20,8 @@ class SearchScreen : Fragment(), OnItemClickListener {
     private lateinit var binding: ScreenSearchBinding
 
     private val viewModel: SearchCityViewModel by inject()
-    private val sharedPreferencesHelper: SharedPreferencesHelper by inject()
 
+    private val sharedPreferencesHelper: SharedPreferencesHelper by inject()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -58,7 +58,7 @@ class SearchScreen : Fragment(), OnItemClickListener {
                 if (p0.isNullOrEmpty() || p0.length <= 3) {
                     showRecentlySearchedCities(sharedPreferencesHelper)
                 } else {
-                    viewModel.getCities(p0.trim())
+                    viewModel.getCity(p0.trim())
                 }
                 return true
             }
@@ -100,5 +100,4 @@ class SearchScreen : Fragment(), OnItemClickListener {
     override fun onItemClick(itemData: City) {
         findNavController().navigate(R.id.action_search_screen_to_home_screen)
     }
-
 }

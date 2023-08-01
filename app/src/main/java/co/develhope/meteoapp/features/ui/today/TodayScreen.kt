@@ -1,5 +1,6 @@
 package co.develhope.meteoapp.features.ui.today
 
+import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -53,10 +54,10 @@ class TodayScreen : Fragment() {
             Toast.makeText(context,"Search a city!", Toast.LENGTH_SHORT).show()
         }
 
-        viewModel.downloadForecastInfo(sharedPreferencesHelper)
+        viewModel.downloadWeatherInfo(sharedPreferencesHelper)
 
-        viewModel.forecastLiveData.observe(viewLifecycleOwner){
-            showTodayMeteo(it)
+        viewModel.weatherLiveData.observe(viewLifecycleOwner){
+            showTodayWeather(it)
             scrollToCurrentHour(it)
         }
 
@@ -64,7 +65,7 @@ class TodayScreen : Fragment() {
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun showTodayMeteo(meteo: WeatherConditions){
+    private fun showTodayWeather(meteo: WeatherConditions){
         binding.todayRecyclerView.layoutManager = LinearLayoutManager(context)
         binding.todayRecyclerView.adapter = TodayAdapter(meteo)
     }
@@ -78,10 +79,11 @@ class TodayScreen : Fragment() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun getCityName(sharedPreferencesHelper: SharedPreferencesHelper) {
         val cityName = sharedPreferencesHelper.getCityName()
         val regionName= sharedPreferencesHelper.getCountry()
-        binding.todayTitleCity.setText("$cityName, $regionName")
+        binding.todayTitleCity.text = "$cityName, $regionName"
     }
 }
 

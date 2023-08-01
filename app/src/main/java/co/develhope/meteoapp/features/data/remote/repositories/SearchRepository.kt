@@ -1,8 +1,7 @@
 package co.develhope.meteoapp.features.data.remote.repositories
 
 import co.develhope.meteoapp.features.data.remote.apis.SearchCityApi
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+
 
 class SearchRepository(
     private val searchCityApi: SearchCityApi

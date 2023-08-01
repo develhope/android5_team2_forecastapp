@@ -87,18 +87,18 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun isGooglePlayServicesAvailable(): Boolean {
-        Log.e("Main", "we are checking playservice availibalet: ")
+    private fun isGooglePlayServicesAvailable(): Boolean {
+        Log.e("Main", "we are checking play service availability")
         val apiAvailability = GoogleApiAvailability.getInstance()
         val resultCode = apiAvailability.isGooglePlayServicesAvailable(this)
         return resultCode == ConnectionResult.SUCCESS
     }
 
-    fun getGeoLocalization() {
+    private fun getGeoLocalization() {
         if (isGooglePlayServicesAvailable()) {
             try {
                 GeoLocalizationHelper.getCurrentLocation(this, sharedPreferencesHelper)
-                Log.e("Main", "Succesfully getting location: ")
+                Log.e("Main", "Successfully getting location: ")
             } catch (e: Exception) {
                 Log.e("Main", "Error getting location: ${e.message}")
             }

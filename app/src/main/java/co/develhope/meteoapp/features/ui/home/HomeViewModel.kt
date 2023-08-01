@@ -16,16 +16,14 @@ class HomeViewModel(
 ) : ViewModel() {
 
     private val _weeklyWeatherLiveData = MutableLiveData<WeatherConditions>()
-
     val weeklyWeatherLiveData: LiveData<WeatherConditions> = _weeklyWeatherLiveData
 
-
     @RequiresApi(Build.VERSION_CODES.O)
-    fun retrieveMeteo(sharedPreferencesHelper: SharedPreferencesHelper) {
+    fun retrieveWeather(sharedPreferencesHelper: SharedPreferencesHelper) {
         viewModelScope.launch {
             try {
-                val meteo = homeRepository.getHomeWeather(sharedPreferencesHelper)
-                _weeklyWeatherLiveData.postValue(meteo)
+                val weatherConditions = homeRepository.getDailyWeather(sharedPreferencesHelper)
+                _weeklyWeatherLiveData.postValue(weatherConditions)
             } catch (e: Exception) {
 //               TODO ADD ERROR MANAGEMENT
             }

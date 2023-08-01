@@ -1,5 +1,6 @@
 package co.develhope.meteoapp.features.ui.tomorrow
 
+import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -47,16 +48,18 @@ class TomorrowScreen : Fragment() {
             Toast.makeText(context,"Search a city!", Toast.LENGTH_SHORT).show()
         }
 
-        viewModel.downloadForecastInfo(sharedPreferencesHelper)
+        viewModel.downloadWeatherInfo(sharedPreferencesHelper)
 
-        viewModel.forecastLiveData.observe(viewLifecycleOwner){
-            showTomorrowMeteo(it)
+        viewModel.weatherLiveData.observe(viewLifecycleOwner){
+            showTomorrowWeather(it)
         }
+
         getCityName(sharedPreferencesHelper)
+
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun showTomorrowMeteo(meteo: WeatherConditions){
+    private fun showTomorrowWeather(meteo: WeatherConditions){
         binding.tomorrowRecyclerView.apply {
             binding.tomorrowRecyclerView.layoutManager = LinearLayoutManager(context)
             binding.tomorrowRecyclerView.adapter = TomorrowAdapter(meteo)
@@ -64,6 +67,7 @@ class TomorrowScreen : Fragment() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun getCityName(sharedPreferencesHelper: SharedPreferencesHelper){
         binding.tomorrowTitleCity.text = "${sharedPreferencesHelper.getCityName()}, ${sharedPreferencesHelper.getCountry()}"
     }

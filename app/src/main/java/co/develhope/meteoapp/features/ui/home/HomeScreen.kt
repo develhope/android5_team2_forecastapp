@@ -41,14 +41,14 @@ class HomeScreen : Fragment() {
             findNavController().navigate(R.id.action_home_screen_to_search_screen)
             Toast.makeText(context,"Search a city!", Toast.LENGTH_SHORT).show()
         }
-        viewModel.retrieveMeteo(sharedPreferencesHelper)
+        viewModel.retrieveWeather(sharedPreferencesHelper)
         viewModel.weeklyWeatherLiveData.observe(viewLifecycleOwner) {
-            showMeteo(it)
-            showTodaysMeteo(it,sharedPreferencesHelper)
+            showWeather(it)
+            showTodayWeather(it,sharedPreferencesHelper)
         }
     }
 
-    fun showTodaysMeteo(item: WeatherConditions, sharedPreferencesHelper: SharedPreferencesHelper, position: Int = 0) {
+    private fun showTodayWeather(item: WeatherConditions, sharedPreferencesHelper: SharedPreferencesHelper, position: Int = 0) {
         val maxTemperature = item.daily.maxTemperature[position].toInt()
         val minTemperature = item.daily.minTemperature[position].toInt()
         val date = item.daily.time[position]
@@ -66,8 +66,8 @@ class HomeScreen : Fragment() {
         binding.cityName.text = cityName.plus(", $country")
     }
 
-    fun showMeteo(meteo: WeatherConditions) {
-        binding.recyclerView.adapter = HomeScreenAdapter(meteo)
+    private fun showWeather(weatherCondition: WeatherConditions) {
+        binding.recyclerView.adapter = HomeScreenAdapter(weatherCondition)
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
     }
 
