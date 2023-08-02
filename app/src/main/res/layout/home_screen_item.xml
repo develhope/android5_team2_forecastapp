@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/today"
-                android:textAppearance="@style/home_30_sp"
+                android:textAppearance="@style/home_20_sp_bold"
                 android:gravity="start"
                 android:layout_weight="1"/>
 
@@ -58,7 +58,7 @@
                 android:layout_weight="1"
                 android:gravity="start"
                 android:text=""
-                android:textAppearance="@style/home_30_sp" />
+                android:textAppearance="@style/home_20_sp_bold" />
 
             <TextView
                 android:id="@+id/min_temperature_text"
@@ -82,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text=""
-                android:textAppearance="@style/home_30_sp"
+                android:textAppearance="@style/home_20_sp_bold"
                 android:gravity="start"
                 android:layout_weight="1"/>
 
@@ -130,7 +130,7 @@
                 android:layout_weight="1"
                 android:gravity="start"
                 android:text=""
-                android:textAppearance="@style/home_30_sp" />
+                android:textAppearance="@style/home_20_sp_bold" />
 
             <TextView
                 android:id="@+id/rainfall_text"
@@ -155,7 +155,7 @@
                 android:layout_height="match_parent"
                 android:gravity="start"
                 android:text=""
-                android:textAppearance="@style/home_30_sp"
+                android:textAppearance="@style/home_20_sp_bold"
                 android:layout_weight="1"/>
 
             <TextView
