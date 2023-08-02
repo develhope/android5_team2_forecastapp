@@ -12,7 +12,7 @@
     <dimen name="dimens18dp">18dp</dimen>
     <dimen name="dimens22dp">22dp</dimen>
     <dimen name="dimens24dp">24dp</dimen>
-    <dimen name="dimens24sp">24sp</dimen>
+    <dimen name="dimens30sp">30sp</dimen>
     <dimen name="dimens32dp">32dp</dimen>
     <dimen name="dimens50dp">50dp</dimen>
     <dimen name="dimens46dp">46dp</dimen>
@@ -20,7 +20,7 @@
     <dimen name="dimens117dp">117dp</dimen>
     <dimen name="dimens145dp">145dp</dimen>
     <dimen name="dimens152dp">152dp</dimen>
-    <dimen name="dimens155dp">155dp</dimen>
+    <dimen name="dimens155dp">170dp</dimen>
     <dimen name="dimens254dp">254dp</dimen>
     <dimen name="dimens261dp">261dp</dimen>
     <dimen name="dimens342dp">342dp</dimen>

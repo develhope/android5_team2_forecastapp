@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">meteoapp</string>
     <!-- home page ui fixed values -->
-    <string name="next_5_days">Prossimi 5 giorni</string>
+    <string name="next_5_days">PROSSIMI 5 GIORNI</string>
     <string name="min">min</string>
     <string name="max">max</string>
     <string name="rainfall">precip.</string>
@@ -48,7 +48,7 @@
     <string name="NNW">NNO</string>
 
     <!--    forecast info-->
-    <string name="clear">Clear sky</string>
+    <string name="clear">Sereno</string>
     <string name="mainly_clear">Prevalentemente sereno</string>
     <string name="partly_cloudy">Parzialmente Nuvoloso</string>
     <string name="overcast">Nuvoloso</string>

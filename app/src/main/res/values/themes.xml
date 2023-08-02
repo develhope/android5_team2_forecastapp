@@ -28,14 +28,15 @@
         <item name="android:fontFamily">@font/inter</item>
     </style>
 
-    <style name="home_20_sp">
+    <style name="home_30_sp">
         <item name="android:textSize">@dimen/dimens20sp</item>
         <item name="android:textColor">@color/white_text</item>
         <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="home_15_sp">
-        <item name="android:textSize">@dimen/dimens15sp</item>
+    <style name="home_20_sp">
+        <item name="android:textSize">@dimen/dimens20sp</item>
         <item name="android:textColor">@color/white_text</item>
         <item name="android:fontFamily">@font/inter</item>
     </style>
@@ -51,6 +52,8 @@
         <item name="android:textSize">@dimen/dimens32sp</item>
         <item name="android:textColor">@color/white_text</item>
         <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textStyle">bold</item>
+
     </style>
 
     <style name="dialogAnimation">
