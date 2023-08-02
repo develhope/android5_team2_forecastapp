@@ -29,7 +29,7 @@ class TomorrowAdapter(private val item: WeatherConditions) :
         fun bindItem(item: WeatherConditions, position: Int){
             val hour = item.hourly.time[position]
             val temperature = item.hourly.temperature[position].toInt()
-            val generalHumidity = item.hourly.dewPoint[position].toInt()
+            val generalHumidity = item.hourly.precipitationProbability[position].toInt()
             val apparentTemperature = item.hourly.apparentTemperature[position].toInt()
             val uvIndex = item.hourly.uvIndex[position]
             val humidity = item.hourly.relativeHumidity[position]
@@ -38,7 +38,7 @@ class TomorrowAdapter(private val item: WeatherConditions) :
             val rainInMm = item.hourly.rain[position].toInt()
             binding.hourItem.text = hour.takeLast(5)
             binding.gradeItem.text = temperature.toString().plus(item.hourlyHunits.temperatureIUnit)
-            binding.humidityPercentageItem.text = generalHumidity.toString().plus(item.hourlyHunits.humidityUnit)
+            binding.rainProbabilityItem.text = generalHumidity.toString().plus(item.hourlyHunits.humidityUnit)
             binding.cardPerceivedGradeVal.text = apparentTemperature.toString().plus(item.hourlyHunits.temperatureIUnit)
             binding.cardUvVal.text = uvIndex.toString()
             binding.cardHumidityVal.text = humidity.toString().plus(item.hourlyHunits.humidityUnit)

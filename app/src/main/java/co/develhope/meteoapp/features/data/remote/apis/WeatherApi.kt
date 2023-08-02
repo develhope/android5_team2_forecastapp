@@ -14,7 +14,7 @@ interface WeatherApi {
         @Query("timezone") timezone: String
     ): WeatherConditions
 
-    @GET("v1/forecast?"+"hourly=temperature_2m,relativehumidity_2m,dewpoint_2m,apparent_temperature,rain,weathercode,cloudcover,windspeed_10m,uv_index,is_day,winddirection_10m")
+    @GET("v1/forecast?"+"hourly=temperature_2m,relativehumidity_2m,precipitation_probability,apparent_temperature,rain,weathercode,cloudcover,windspeed_10m,uv_index,is_day,winddirection_10m")
     suspend fun getForecast(
         @Query("latitude") latitude: Double? =52.52,
         @Query("longitude") longitude: Double? =13.41,
