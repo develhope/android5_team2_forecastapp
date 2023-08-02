@@ -29,11 +29,12 @@
 
     <!-- Prossimi 5 giorni -->
     <TextView
-        android:id="@+id/prossimi_5_"
+        android:id="@+id/next_5_days"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dimens10dp"
         android:text="@string/next_5_days"
+        android:textAllCaps="true"
         android:textAppearance="@style/home_16_sp"/>
 
     <!--    Recycler homescreen item-->

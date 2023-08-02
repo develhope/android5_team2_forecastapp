@@ -162,7 +162,7 @@
                 android:id="@+id/wind_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/wind"
+                android:text="@string/wind_m"
                 android:textAppearance="@style/home_20_sp"
                 android:gravity="start"
                 android:layout_weight="1"/>
