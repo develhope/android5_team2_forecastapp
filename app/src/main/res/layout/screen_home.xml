@@ -4,6 +4,7 @@
     android:id="@+id/home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/dimens32dp"
     android:background="@drawable/gradient_background"
     android:orientation="vertical">
 
@@ -13,7 +14,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimens24dp"
-        android:layout_marginStart="@dimen/dimens24dp"
         android:layout_marginBottom="@dimen/dimens22dp"
         android:text=""
         android:gravity="top"
@@ -22,25 +22,25 @@
     <include
         android:id="@+id/home_today"
         layout="@layout/home_screen_item"
-        android:layout_width="@dimen/dimens342dp"
-        android:layout_height="@dimen/dimens155dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/dimens32dp"/>
 
     <!-- Prossimi 5 giorni -->
     <TextView
-        android:id="@+id/prossimi_5_"
+        android:id="@+id/next_5_days"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimens10dp"
         android:layout_marginBottom="@dimen/dimens10dp"
         android:text="@string/next_5_days"
+        android:textAllCaps="true"
         android:textAppearance="@style/home_16_sp"/>
 
     <!--    Recycler homescreen item-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         tools:itemCount="5"

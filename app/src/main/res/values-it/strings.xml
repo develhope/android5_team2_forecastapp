@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">meteoapp</string>
     <!-- home page ui fixed values -->
-    <string name="next_5_days">Prossimi 5 giorni</string>
+    <string name="next_5_days">prossimi 5 giorni</string>
     <string name="min">min</string>
     <string name="max">max</string>
     <string name="rainfall">precip.</string>
@@ -25,6 +25,7 @@
     <string name="UV">Indice UV</string>
     <string name="humidity">Umidità</string>
     <string name="wind">Vento</string>
+    <string name="wind_m">vento</string>
     <string name="cover">Copertura</string>
     <string name="rain">Pioggia</string>
     <string name="sun">sole</string>
@@ -48,7 +49,7 @@
     <string name="NNW">NNO</string>
 
     <!--    forecast info-->
-    <string name="clear">Clear sky</string>
+    <string name="clear">Sereno</string>
     <string name="mainly_clear">Prevalentemente sereno</string>
     <string name="partly_cloudy">Parzialmente Nuvoloso</string>
     <string name="overcast">Nuvoloso</string>
@@ -62,7 +63,6 @@
     <string name="slight_rain">Pioggia intensità leggera</string>
     <string name="moderate_rain">Pioggia intensità moderata</string>
     <string name="heavy_rain">Pioggia intensità forte</string>
-
     <string name="freezing_light_rain">Pioggia leggera gelata</string>
     <string name="freezing_heavy_intensity_rain">Pioggia gelata alta intensità</string>
     <string name="slight_snow">Nevicata leggera</string>
