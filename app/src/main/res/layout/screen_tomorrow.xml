@@ -19,7 +19,7 @@
         android:id="@+id/tomorrow_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/today"
+        android:text="@string/tomorrow"
         android:layout_marginStart="@dimen/dimens24dp"
         android:layout_marginEnd="@dimen/dimens24dp"
         style="@style/title_day_20_sp_bold" />
