@@ -2,7 +2,6 @@ package co.develhope.meteoapp.features.ui.search
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import co.develhope.meteoapp.databinding.SearchScreenItemBinding
 import co.develhope.meteoapp.features.data.local.SharedPreferencesHelper
@@ -38,7 +37,7 @@ class SearchScreenAdapter( private val items: SearchCityResult, private val citi
         }
         fun clicking(item: City){
             binding.searchItem.setOnClickListener {
-                Toast.makeText(binding.searchItem.context , "Retrieving the weather forecast for ${item.name}, ${item.admin1}", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(binding.searchItem.context , "Retrieving the weather forecast for ${item.name}, ${item.admin1}", Toast.LENGTH_SHORT).show()
                 sharedPreferencesHelper.saveLatitude(item.latitude)
                 sharedPreferencesHelper.saveLongitude(item.longitude)
                 sharedPreferencesHelper.saveCityName(item.name)

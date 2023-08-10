@@ -1,42 +1,34 @@
 package co.develhope.meteoapp.features.ui.main
 
+import android.annotation.SuppressLint
+import android.os.Build
+import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.PopupWindow
-import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import android.annotation.SuppressLint
-import android.os.Build
-import android.os.Bundle
-import android.util.Log
-import androidx.annotation.RequiresApi
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.ActivityMainBinding
 import co.develhope.meteoapp.features.ui.error_message.ConnectivityObserver
 import co.develhope.meteoapp.features.ui.error_message.NetworkConnectivityObserver
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import co.develhope.meteoapp.features.data.local.GeoLocalizationHelper
-import co.develhope.meteoapp.features.data.local.SharedPreferencesHelper
-import com.google.android.gms.common.ConnectionResult
-import com.google.android.gms.common.GoogleApiAvailability
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationServices
-import org.koin.android.ext.android.inject
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
   
     private lateinit var binding: ActivityMainBinding
     private lateinit var fusedLocationClient: FusedLocationProviderClient
-    private val sharedPreferencesHelper: SharedPreferencesHelper by inject()
     private lateinit var connectivityObserver: ConnectivityObserver
     private lateinit var popupWindow: PopupWindow
 
@@ -45,8 +37,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-//        GeoLocalizationHelper.getCurrentLocation(this, sharedPreferencesHelper)
-        getGeoLocalization()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -87,29 +77,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun isGooglePlayServicesAvailable(): Boolean {
-        Log.e("Main", "we are checking play service availability")
-        val apiAvailability = GoogleApiAvailability.getInstance()
-        val resultCode = apiAvailability.isGooglePlayServicesAvailable(this)
-        return resultCode == ConnectionResult.SUCCESS
-    }
-
-    private fun getGeoLocalization() {
-        if (isGooglePlayServicesAvailable()) {
-            try {
-                GeoLocalizationHelper.getCurrentLocation(this, sharedPreferencesHelper)
-                Log.e("Main", "Successfully getting location: ")
-            } catch (e: Exception) {
-                Log.e("Main", "Error getting location: ${e.message}")
-            }
-        } else {
-            // Google Play Services are not available
-            Log.e("Main", "Google Play Services are not available on this device.")
-        }
-    }
 
     private fun showToast(message: String) {
-        Toast.makeText(applicationContext, message, Toast.LENGTH_LONG).show()
+//        Toast.makeText(applicationContext, message, Toast.LENGTH_LONG).show()
     }
 
     private fun showPopup() {

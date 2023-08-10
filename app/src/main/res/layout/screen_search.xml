@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/search_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/screen_search_background_color"
-    tools:context=".features.ui.search.SearchScreen"
     android:orientation="vertical"
-    android:padding="@dimen/dimens18dp">
+    android:padding="@dimen/dimens18dp"
+    tools:context=".features.ui.search.SearchScreen">
+
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search_widget"
@@ -17,25 +17,33 @@
         android:layout_height="wrap_content"
         android:background="@drawable/search_rectangle"
         android:inputType="text"
-        app:searchIcon="@drawable/search"
-        app:queryHint="@string/search_a_city"
+        app:iconifiedByDefault="false"
         app:queryBackground="@drawable/search_rectangle"
-        app:iconifiedByDefault="false"/>
+        app:queryHint="@string/search_a_city"
+        app:searchIcon="@drawable/search" />
+
+    <ImageView
+        android:id="@+id/location_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mapproject_adobe_express"
+        android:layout_marginTop="@dimen/dimens10dp"
+        android:layout_gravity="center"/>
 
     <TextView
         android:id="@+id/textview_screen_search"
+        style="@style/title_day_16_sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimens22dp"
         android:text="@string/recent_researches"
-        android:visibility="gone"
-        style="@style/title_day_16_sp"/>
+        android:visibility="gone" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/search_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/search_screen_item"
-        android:layout_marginTop="@dimen/dimens24dp"/>
+        android:layout_marginTop="@dimen/dimens24dp"
+        tools:listitem="@layout/search_screen_item" />
 
 </LinearLayout>

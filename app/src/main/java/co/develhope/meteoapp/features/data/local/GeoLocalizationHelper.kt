@@ -1,21 +1,17 @@
 package co.develhope.meteoapp.features.data.local
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
 import android.location.Geocoder
 import android.location.Location
 import android.location.LocationManager
 import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import co.develhope.meteoapp.R
-import com.google.android.gms.location.LocationServices
 
 object GeoLocalizationHelper {
-    private fun isLocationEnabled(context: Context): Boolean {
+     fun isLocationEnabled(context: Context): Boolean {
         val locationManager: LocationManager =
             context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
         return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(
@@ -23,7 +19,7 @@ object GeoLocalizationHelper {
         )
     }
 
-    private fun checkPermissions(context: Context): Boolean {
+     fun checkPermissions(context: Context): Boolean {
         if (ActivityCompat.checkSelfPermission(
                 context,
                 Manifest.permission.ACCESS_COARSE_LOCATION
@@ -38,7 +34,7 @@ object GeoLocalizationHelper {
         return false
     }
 
-    private fun requestPermissions(activity: AppCompatActivity) {
+     fun requestPermissions(activity: AppCompatActivity) {
         ActivityCompat.requestPermissions(
             activity,
             arrayOf(
@@ -49,32 +45,8 @@ object GeoLocalizationHelper {
         )
     }
 
-    @SuppressLint("MissingPermission", "SetTextI18n")
-    fun getCurrentLocation(activity: AppCompatActivity,sharedPreferencesHelper: SharedPreferencesHelper) {
-        val fusedLocationClient = LocationServices.getFusedLocationProviderClient(activity)
-        if (checkPermissions(activity)) {
-            Log.d("main","permissions granted??")
-            if (isLocationEnabled(activity)) {
-                Log.d("main","location enabled?")
-                fusedLocationClient.lastLocation.addOnCompleteListener(activity) { task ->
-                    val location: Location? = task.result
-                    Log.d("main","$location is nul??")
-                    if (location != null) {
-                        saveLocation(activity,sharedPreferencesHelper,location)
-                    }
-                }
-            } else {
-                Toast.makeText(activity, activity.getString(R.string.request_turn_on_position), Toast.LENGTH_LONG).show()
-//                serve a chiedere all'utente di attivare la posizione
-//                val intent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
-//                startActivity(intent)
-            }
-        } else {
-            requestPermissions(activity)
-        }
-    }
 
-    private fun saveLocation(context: Context,sharedPreferencesHelper: SharedPreferencesHelper, location:Location){
+     fun saveLocation(context: Context,sharedPreferencesHelper: SharedPreferencesHelper, location:Location){
         Log.d("main","${location.latitude}")
         sharedPreferencesHelper.saveLongitude(location.longitude)
         sharedPreferencesHelper.saveLatitude(location.latitude)
